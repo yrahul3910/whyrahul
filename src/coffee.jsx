@@ -7,7 +7,6 @@ export default [
             <div>
                 <p>
                     Since water is most of coffee, it is important to check its quality. I luckily live in a <a href="https://raleighnc.gov/services/content/PubUtilAdmin/Articles/WaterQualityReports.html#paragraph--222826">soft water area</a>, so a Brita filter usually suffices.
-                    However, I will sometimes add a few drops of a 2g/L solution of sodium bicarbonate (in distilled water) if I feel my coffee is sour, but the rest of my brewing process was good.
                 </p>
                 <p>
                     My current favorite coffee is <a href="https://counterculturecoffee.com/shop/coffee/la-golondrina">La Golondrina by Counter Culture</a>.
@@ -29,7 +28,7 @@ export default [
         info:
             <div>
                 <p>
-                    I moved from my <a href="https://www.bodum.com/us/en/10685-kenya">French Press</a> to my <a href="https://aeropress.com/product/aeropress-coffee-maker/">AeroPress</a>. I use water 20 seconds off boil, at 65g/L using a medium-fine grind (7 clicks on my Hario Mini Mill), inverted with a 5-second stir and a 1m 15s brew. I'm quite satisfied with this brew, and haven't tinkered more.
+                    I moved from my <a href="https://www.bodum.com/us/en/10685-kenya">French Press</a> to my <a href="https://aeropress.com/product/aeropress-coffee-maker/">AeroPress</a>, to a V60. I use 95C water, at 60g/L using a medium-fine grind (17 on my Encore) with the Hoffmann method. I'm quite satisfied with this brew, and haven't tinkered more.
                 </p>
             </div>
     }

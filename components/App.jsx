@@ -13,10 +13,10 @@ export default class App extends React.Component {
     render() {
         return (
             <Switch>
-                <Route exact path="/whyrahul" render={(props) =>
+                <Route exact path="/" render={(props) =>
                     <MainPage {...props} />
                 } />
-                <Route exact path="/whyrahul/tldr" render={() => 
+                <Route exact path="/tldr" render={() => 
                     <Tldr /> 
                 } />
                 <Route path="/*" render={() =>

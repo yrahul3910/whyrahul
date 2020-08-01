@@ -10,7 +10,7 @@ import researchInterests from "../src/research_interests";
 import contacts from "../src/contacts.jsx";
 import projects from "../src/projects.jsx";
 import skills from "../src/skills.jsx";
-import coffee from "../src/coffee.jsx";
+import hobbies from "../src/hobbies.jsx";
 
 export default class MainPage extends React.Component {
     constructor(props) {
@@ -36,33 +36,11 @@ export default class MainPage extends React.Component {
                 <NewBanner />
                 <StickyNav />
                 <main>
-                    <div className="split-box">
-                        <div className="nav">
-                            <i className="fas fa-download" style={{ color: "rgb(125, 140, 31)", fontSize: 52 }}></i>
-                            <div className="profile-details">
-                                <p style={{ color: "rgb(125, 140, 31)", fontSize: 40, fontWeight: "500" }}>20,715</p>
-                                <h2 style={{ color: "rgb(125, 150, 31)", margin: "0 50px" }}>The number of downloads of Xtreme Calculations as on April 19, 2019.</h2>
-                            </div>
-
-                            <i className="fas fa-quote-left" style={{ color: "rgb(125, 140, 31)", fontSize: 52, marginBottom: "30px" }}></i>
-                            <div className="profile-details">
-                                <h2 style={{ color: "rgb(125, 150, 31)", margin: "0 50px" }}>[...] Xtreme Calculations is quite a complete suite that is able to provide a lot of functions in an attractive package.</h2>
-                                <h2 style={{ alignSelf: "flex-end", margin: "0 50px" }}>Softpedia</h2>
-                            </div>
-                        </div>
-                        <div className="nav">
-                            <div className="profile-details">
-                                <h1 style={{ fontSize: 40, fontWeight: "500" }}>AIR 27</h1>
-                                <h2 style={{ margin: "0 50px" }}>All India Rank in the National Creativity Aptitude Test (NCAT) 2017, a nation-wide aptitude test with 198 participating institutions.</h2>
-                                <h1 style={{ fontSize: 40, fontWeight: "500" }}>66%ile</h1>
-                                <h2 style={{ margin: "0 50px" }}>In the GRE Mathematics Subject Test, October 27, 2018, with a score 730/990</h2>
-                            </div>
-                        </div>
-                    </div>
                     <section id="research" className="blue-background">
                         <h1>Research Interests</h1>
+                        <h3>Click a card to expand.</h3>
                         <p>
-                            I majored in Computer Science out of my zeal for the field. My research work can be found on <a style={{ color: "white" }} href="https://www.researchgate.net/profile/Rahul_Yedida2">my ResearchGate profile</a>. Below are the fields that I would love to pursue research in, in no particular order.
+                            My research work can be found on <a style={{ color: "white" }} href="https://scholar.google.com/citations?user=0lP2AvkAAAAJ&hl=en">my Google Scholar profile</a>. Below are the fields that I am in, in no particular order.
                         </p>
                         <CardGrid cards={researchInterests} />
                     </section>
@@ -82,11 +60,11 @@ export default class MainPage extends React.Component {
                         </div>
                     </section>
                     <section id="hobbies">
-                        <h1>Coffee</h1>
+                        <h1>Miscellania</h1>
                         <p>
-                            A major hobby of mine is experimenting with different ways of brewing better coffee. I learned a lot of what I know from watching <a href="https://www.youtube.com/channel/UCMb0O2CdPBNi-QqPk5T3gsQ">James Hoffmann's channel on YouTube</a>. Click the cards below to view my brewing process.    
+                            A major hobby of mine is experimenting with different ways of brewing better coffee. I learned a lot of what I know from watching <a href="https://www.youtube.com/channel/UCMb0O2CdPBNi-QqPk5T3gsQ">James Hoffmann's channel on YouTube</a>.  
                         </p>
-                        <CardGrid cards={coffee} />
+                        <CardGrid cards={hobbies} />
                     </section>
                     <section id="contact" className="red-background">
                         <h1>Contact</h1>

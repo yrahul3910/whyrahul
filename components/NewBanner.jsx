@@ -25,7 +25,7 @@ export default class NewBanner extends React.Component {
 
                         <div style={{ fontSize: 18 }}>
                             I convert coffee to 
-                            <div class="rotating">
+                            <div className="rotating">
                                 <span>code.</span>
                                 <span>research.</span>
                                 <span>less coffee.</span>

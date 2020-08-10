@@ -9,15 +9,11 @@ export default [
                     <i className="fab fa-skype"></i>
                     y.rahul@outlook.com
                 </div>
-                <a href="mailto:ryedida@ncsu.edu">
+                <a href="mailto:r.yedida@pm.me">
                     <i className="fas fa-envelope"></i>
                     E-mail
                 </a>
                 <span className="chip">Preferred</span>
-                <div>
-                    <i className="fab fa-telegram"></i>
-                    @theyedida
-                </div>
             </div>
         )
     },
@@ -32,40 +28,15 @@ export default [
                     </a>
                 </div>
                 <div>
-                    <a href="https://www.researchgate.net/profile/Rahul_Yedida2">
-                        <i className="fab fa-researchgate"></i>
-                        ResearchGate
+                    <a href="https://scholar.google.com/citations?user=0lP2AvkAAAAJ&hl=en">
+                        <i className="fab fa-google"></i>
+                        Google Scholar
                     </a>
                 </div>
                 <div>                    
                     <a href="https://www.linkedin.com/in/rahul-yedida/">
                         <i className="fab fa-linkedin-in"></i>
                         LinkedIn
-                    </a>
-                </div>
-            </div>
-        )
-    },
-    {
-        title: "Social",
-        info: (
-            <div>
-                <div>
-                    <a href="https://www.messenger.com/t/rahul.yedida.5">
-                        <i className="fab fa-instagram"></i>
-                        Messenger
-                    </a>
-                </div>
-                <div>
-                    <a href="https://www.quora.com/profile/Rahul-Yedida">
-                        <i className="fab fa-quora"></i>
-                        Quora
-                    </a>
-                </div>
-                <div>
-                    <a href="https://www.instagram.com/r.yedi.da/">
-                        <i className="fab fa-facebook-messenger"></i>
-                        Instagram
                     </a>
                 </div>
             </div>

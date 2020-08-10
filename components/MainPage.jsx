@@ -6,7 +6,7 @@ import CardGrid from "./CardGrid.jsx";
 import ScrollToTop from "./ScrollToTop.jsx";
 import SkillSet from "./SkillSet.jsx";
 
-import researchInterests from "../src/research_interests";
+import researchInterests from "../src/research_interests.jsx";
 import contacts from "../src/contacts.jsx";
 import projects from "../src/projects.jsx";
 import skills from "../src/skills.jsx";

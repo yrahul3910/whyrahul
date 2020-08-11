@@ -9,7 +9,7 @@ export default [
                 <p><b>Recent papers:</b></p>
                 <ul>
                     <li><a href="https://arxiv.org/abs/2006.00444">Recognizing actionable static code warnings using SVMs</a></li>
-                    <li><a href="">Improving deep learning for defect prediction</a></li>
+                    <li><a href="https://arxiv.org/abs/2008.03835">Improving deep learning for defect prediction</a></li>
                 </ul>
                 <br/>
             </div>

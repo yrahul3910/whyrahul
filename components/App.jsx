@@ -2,7 +2,6 @@ import React from "react";
 import { Switch, Route } from "react-router-dom";
 
 import MainPage from "./MainPage.jsx";
-import Tldr from "./Tldr.jsx";
 import NotFound from "./NotFound.jsx";
 
 export default class App extends React.Component {

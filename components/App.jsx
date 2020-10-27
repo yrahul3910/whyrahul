@@ -16,9 +16,6 @@ export default class App extends React.Component {
                 <Route exact path="/" render={(props) =>
                     <MainPage {...props} />
                 } />
-                <Route exact path="/tldr" render={() => 
-                    <Tldr /> 
-                } />
                 <Route path="/*" render={() =>
                     <NotFound />
                 } />

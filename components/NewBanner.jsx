@@ -6,7 +6,7 @@ export default class NewBanner extends React.Component {
             <div className="split-box" id="top">
                 <div className="nav">
                     <div id="banner-profile" className="profile-details">
-                        <img id="background-picture" />
+                        <img id="background-picture" src="/profile.jpg" />
                         <h1>Rahul Yedida</h1>
                         <h3>Ph.D. Student</h3>
                         <h4>Department of Computer Science, North Carolina State University</h4>

@@ -4,34 +4,29 @@ export default class NewBanner extends React.Component {
     render() {
         return (
             <div className="split-box" id="top">
-                <div className="nav" id="background-picture">
-                    
-                </div>
                 <div className="nav">
                     <div id="banner-profile" className="profile-details">
+                        <img id="background-picture" />
                         <h1>Rahul Yedida</h1>
-                        <h2>Ph.D. Student</h2>
-                        <h2>Department of Computer Science</h2>
-                        <h2 style={{ marginBottom: "10vh" }}>
-                            <a href="https://csc.ncsu.edu">
-                                North Carolina State University
-                            </a>
-                        </h2>
-                        <h1>About Me</h1>
+                        <h3>Ph.D. Student</h3>
+                        <h4>Department of Computer Science, North Carolina State University</h4>
                         <ul>
-                            <li><b>Experience:</b> Machine learning, web development, .NET</li>
-                            <li><b>Open to:</b> Research scientist / data scientist / software engineer intern </li>
-                        </ul>
+                            <li>
+                                <a style={{textDecoration: "none", color: "black"}}href="mailto:r.yedida@pm.me">
+                                    E-mail
+                                </a>
+                                <i className="fas fa-arrow-right"></i>
+                            </li>
+                            <li>CV<i className="fas fa-arrow-right"></i></li>
+                            <li>Google Scholar<i className="fas fa-arrow-right"></i></li>
+                            <li>
+                                <a style={{textDecoration: "none", color: "black"}}href="https://github.com/yrahul3910">
+                                    GitHub
+                                </a>
+                                <i className="fas fa-arrow-right"></i>
+                            </li>
 
-                        <div style={{ fontSize: 18 }}>
-                            I convert coffee to 
-                            <div className="rotating">
-                                <span>code.</span>
-                                <span>research.</span>
-                                <span>less coffee.</span>
-                            </div>
-                            <p>So what can I help you with?</p>
-                        </div>
+                        </ul>
                     </div>
                 </div>
             </div>

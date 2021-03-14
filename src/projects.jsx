@@ -2,6 +2,18 @@ import React from "react";
 
 export default [
     {
+        title: "NearConnect",
+        info:
+            <div>
+                <p>
+                    A native iOS app written using SwiftUI to discover and connect with nearby peers.
+                </p>
+                <p>
+                    <b>Link: </b><a href="https://nearconnect.us">Website</a> and <a href="https://github.com/yrahul3910/SocialQR">Code</a>
+                </p>
+            </div>
+    },
+    {
         title: "Xtreme Calculations",
         info: 
             <div>
@@ -9,8 +21,7 @@ export default [
                     A math application that got over 20K downloads, with calculus and advanced functions and an easy-to-use interface. This was my first software, developed using VB.NET--which I still strongly believe is an excellent beginner language.
                 </p>
                 <p>
-                    <b>Link: </b><a href="https://www.softpedia.com/get/Science-CAD/Xtreme-Calculations.shtml">Software</a>
-                </p>
+                    <b>Links: </b><a href="https://www.softpedia.com/get/Science-CAD/Xtreme-Calculations.shtml">Software</a>                </p>
             </div>
     },
     {

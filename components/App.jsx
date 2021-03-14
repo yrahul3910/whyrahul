@@ -2,6 +2,7 @@ import React from "react";
 import { Switch, Route } from "react-router-dom";
 
 import MainPage from "./MainPage.jsx";
+import NearConnect from "./NearConnect/NearConnect.jsx";
 import NotFound from "./NotFound.jsx";
 
 export default class App extends React.Component {
@@ -15,6 +16,7 @@ export default class App extends React.Component {
                 <Route exact path="/" render={(props) =>
                     <MainPage {...props} />
                 } />
+                <Route exact path="/nearconnect" component={NearConnect} />
                 <Route path="/*" render={() =>
                     <NotFound />
                 } />

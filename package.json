@@ -9,7 +9,7 @@
     "build": "webpack --mode development",
     "predist": "rm -rf dist/",
     "dist": "webpack --config webpack.prod.js",
-    "postdist": "cp src/profile.jpg dist/",
+    "postdist": "cp assets/* dist/",
     "start": "webpack-dev-server",
     "predeploy": "npm run dist",
     "deploy": "cp dist/* ../yrahul3910.github.io/",

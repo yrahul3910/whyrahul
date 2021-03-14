@@ -46,8 +46,13 @@ export default [
         title: "Social",
         info: (
             <div>
-                <p>Pfft, like grad students have a social life.</p>
-                <p>I'm currently staying away from social media, so I am not available on these platforms.</p>
+                <div>
+                    <a href="https://twitter.com/rahulyedida13">
+                        <i className="fab fa-twitter"></i>
+                        @rahulyedida13
+                    </a>
+                </div>
+                
             </div>
         )
     }

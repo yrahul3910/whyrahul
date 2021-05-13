@@ -43,6 +43,7 @@
   "author": "Rahul Yedida",
   "license": "MIT",
   "dependencies": {
+    "call-bind": "^1.0.2",
     "gh-pages": "^2.0.1",
     "ghspa": "^1.0.0",
     "lodash": "^4.17.19",

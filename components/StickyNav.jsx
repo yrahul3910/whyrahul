@@ -35,7 +35,7 @@ export default class StickyNav extends React.Component {
             <li onClick={this.research}>Research</li>
             <li onClick={this.project}>Projects</li>
             <li onClick={this.contact}>Contact</li>
-            <li><a href="https://github.com/yrahul3910/resume/blob/master/business/resume.pdf">CV</a></li>
+            <li><a href="https://github.com/yrahul3910/resume/raw/master/pdf/business.pdf">CV</a></li>
         </ul>;
     }
 }

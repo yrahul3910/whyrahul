@@ -1,14 +1,6 @@
 import React from "react";
 
 export default class StickyNav extends React.Component {
-    constructor() {
-        super();
-        this.research = this.research.bind(this);
-        this.project = this.project.bind(this);
-        this.contact = this.contact.bind(this);
-        this.showMenu = this.showMenu.bind(this);
-    }
-
     research() {
         let el = document.getElementById("research");
         el.scrollIntoView({block: "start", behavior: "smooth"});
@@ -29,13 +21,18 @@ export default class StickyNav extends React.Component {
         el.classList.toggle("expanded");
     }
 
+    resume() {
+        let el = document.getElementById("resume");
+        el.scrollIntoView({block: "start", behavior: "smooth"});
+    }
+
     render() {
         return <ul className="nav-menu-sticky">
             <li onClick={this.showMenu} id="hamburger"><i className="fas fa-bars"></i></li>
+            <li onClick={this.resume}>Resume</li>
             <li onClick={this.research}>Research</li>
             <li onClick={this.project}>Projects</li>
             <li onClick={this.contact}>Contact</li>
-            <li><a href="https://github.com/yrahul3910/resume/raw/master/pdf/business.pdf">CV</a></li>
         </ul>;
     }
 }

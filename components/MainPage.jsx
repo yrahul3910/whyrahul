@@ -8,6 +8,7 @@ import ScrollToTop from "./ScrollToTop.jsx";
 import researchInterests from "../src/research_interests.jsx";
 import contacts from "../src/contacts.jsx";
 import projects from "../src/projects.jsx";
+import resumeCards from "../src/resumeCards.jsx";
 
 export default class MainPage extends React.Component {
     constructor(props) {
@@ -33,9 +34,14 @@ export default class MainPage extends React.Component {
                 <NewBanner />
                 <StickyNav />
                 <main>
+                    <section id="resume" className="red-background">
+                        <h1>Resume / CV</h1>
+                        <p>Click a card to expand/collapse.</p>
+                        <CardGrid cards={resumeCards} />
+                    </section>
                     <section id="research" className="blue-background">
                         <h1>Research Interests</h1>
-                        <h3>Click a card to expand.</h3>
+                        <h3>Click a card to expand/collapse.</h3>
                         <CardGrid cards={researchInterests} />
                     </section>
                     <section id="projects" className="green-background">

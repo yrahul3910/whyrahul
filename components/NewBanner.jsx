@@ -18,12 +18,6 @@ export default class NewBanner extends React.Component {
                                 <i className="fas fa-arrow-right"></i>
                             </li>
                             <li>
-                                <a style={{textDecoration: "none", color: "black"}} href="https://github.com/yrahul3910/resume/blob/master/business/resume.pdf">
-                                    CV
-                                </a>
-                                <i className="fas fa-arrow-right"></i>
-                            </li>
-                            <li>
                                 <a style={{textDecoration: "none", color: "black"}} href="https://scholar.google.com/citations?user=0lP2AvkAAAAJ&hl=en">
                                     Google Scholar
                                 </a>

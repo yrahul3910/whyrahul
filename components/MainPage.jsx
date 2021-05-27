@@ -36,7 +36,9 @@ export default class MainPage extends React.Component {
                 <main>
                     <section id="resume" className="red-background">
                         <h1>Resume / CV</h1>
-                        <p>Click a card to expand/collapse.</p>
+                        <h3 style={{color: "white"}}>
+                            Looking to hire? I am qualified for the roles below. Click a card to expand/collapse.
+                        </h3>
                         <CardGrid cards={resumeCards} />
                     </section>
                     <section id="research" className="blue-background">

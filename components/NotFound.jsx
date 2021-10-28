@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 export default class NotFound extends React.Component {
     componentDidMount() {
         setTimeout(() => {
-            window.location.replace("/whyrahul");
+            window.location.replace("/");
         }, 5000);
     }
 

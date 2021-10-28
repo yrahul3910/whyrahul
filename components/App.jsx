@@ -1,5 +1,5 @@
 import React from "react";
-import { Switch, Route } from "react-router-dom";
+import { Switch, Route, Redirect } from "react-router-dom";
 
 import MainPage from "./MainPage.jsx";
 import NotFound from "./NotFound.jsx";
@@ -22,6 +22,7 @@ export default class App extends React.Component {
                 <Route path="/*" render={() =>
                     <NotFound />
                 } />
+                <Redirect from="/coffee" to="https://github.com/yrahul3910/whyrahul/blob/master/assets/stf-logo.png" />
             </Switch>
         );
     }

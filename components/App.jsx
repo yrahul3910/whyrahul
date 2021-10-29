@@ -19,10 +19,10 @@ export default class App extends React.Component {
                 } />
                 <Route exact path='/sendtofuture' component={SendToFuture} />
                 <Route exact path="/sendtofuture/privacy" component={Privacy} />
+                <Route exact path="/coffee" component={() => { window.location = "https://github.com/yrahul3910/whyrahul/blob/master/assets/menu.pdf"; return null; }} />
                 <Route path="/*" render={() =>
                     <NotFound />
                 } />
-                <Redirect from="/coffee" to="https://github.com/yrahul3910/whyrahul/blob/master/assets/stf-logo.png" />
             </Switch>
         );
     }

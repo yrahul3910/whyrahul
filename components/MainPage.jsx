@@ -4,6 +4,7 @@ import NewBanner from "./NewBanner.jsx";
 import StickyNav from "./StickyNav.jsx";
 import CardGrid from "./CardGrid.jsx";
 import ScrollToTop from "./ScrollToTop.jsx";
+import { Link } from "react-router-dom";
 
 import researchInterests from "../src/research_interests.jsx";
 import contacts from "../src/contacts.jsx";
@@ -43,7 +44,7 @@ export default class MainPage extends React.Component {
                     </section>
                     <section id="research" className="blue-background">
                         <h1>Research Interests</h1>
-                        <h3>My publications are available at <a href="ryedida.cc/publications">ryedida.cc/publications</a>. Click a card to expand/collapse.</h3>
+                        <h3>My publications are available at <Link to="/publications">ryedida.me/publications</Link>. Click a card to expand/collapse.</h3>
                         <CardGrid cards={researchInterests} />
                     </section>
                     <section id="projects" className="green-background">

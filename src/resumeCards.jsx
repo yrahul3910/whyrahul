@@ -32,6 +32,16 @@ export default [
             </div>
     },
     {
+        title: "Software Developer",
+        info:
+            <div>
+                <p>My resume for software developer roles.</p>
+                <p>
+                    <a href="https://github.com/yrahul3910/resume/raw/master/pdf/Software.pdf">Download</a>
+                </p>
+            </div>
+    },
+    {
         title: "Other Roles",
         info:
             <div>

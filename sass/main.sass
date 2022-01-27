@@ -28,10 +28,16 @@ main
                 color: white
         
         &.green-background
-            background-color: $lightgreen
+            @media (prefers-color-scheme: light)
+                background-color: $green
+            @media (prefers-color-scheme: dark)
+                background-color: $green-dark
 
-            h1
-                color: $font-color
+            h1, p
+                @media (prefers-color-scheme: light)
+                    color: $font-color
+                @media (prefers-color-scheme: dark)
+                    color: $font-color-dark
         
         // Special styling for Contact section
         &#contact

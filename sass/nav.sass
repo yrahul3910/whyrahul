@@ -74,7 +74,11 @@
     margin-top: 5vh
 
 .nav
-    background-color: white
+    @media (prefers-color-scheme: light)
+        background-color: white
+    @media (prefers-color-scheme: dark)
+        background-color: $background-dark
+
     color: $grey
     min-height: calc(100vh - 51px) // 51px is the height of the nav
 
@@ -110,6 +114,17 @@
           flex-wrap: wrap
 
           li
+              @media (prefers-color-scheme: dark)
+                  background-color: $grey
+              @media (prefers-color-scheme: light)
+                  margin: 10px 0
+              @media (prefers-color-scheme: dark)
+                  margin: 10px
+                
+              a
+                  @media (prefers-color-scheme: dark)
+                      color: $font-color-dark
+
               font-size: 18px
               margin: 10px 0
               width: 200px
@@ -121,14 +136,32 @@
 
               @media screen and (min-width: 1024px)
                   text-align: center
+              
+              @media (prefers-color-scheme: light)
+                  border-color: white
+              @media (prefers-color-scheme: dark)
+                  color: $grey
 
               &:hover
-                  background-color: $medgrey
-                  transition: background-color .5s ease-in-out
+                  @media (prefers-color-scheme: light)
+                    background-color: $medgrey
+                    transition: background-color .5s ease-in-out
+                  @media (prefers-color-scheme: dark)
+                    border: solid 1px $red
+                    transition: border .5s ease-in-out
+                    box-shadow: 0 0 5px 3px $red
+
                   cursor: pointer
+                  i
+                      margin-left: 35px
+                      transition: margin-left .3s ease-in-out
 
               i
-                  color: black
+                  @media (prefers-color-scheme: light)
+                    color: black
+                  @media (prefers-color-scheme: dark)
+                    color: $font-color-dark
+
                   font-size: 18px
                   margin-left: 20px
 
@@ -149,7 +182,11 @@
         cursor: pointer
 
 .nav-menu-sticky
-    background-color: rgba(255, 255, 255, 0.8)
+    @media (prefers-color-scheme: light)
+        background-color: rgba(255, 255, 255, 0.8)
+    @media (prefers-color-scheme: dark)
+        background-color: rgba(50, 50, 50, 0.8)
+
     display: flex
 
     backdrop-filter: saturate(180%) blur(20px)
@@ -181,14 +218,22 @@
                 align-self: center
 
     a
-        color: $grey
+        @media (prefers-color-scheme: light)
+            color: $grey
+        @media (prefers-color-scheme: dark)
+            color: white
+
         text-decoration: none !important
 
     i
         color: $grey
 
     li
-        color: $grey
+        @media (prefers-color-scheme: light)
+            color: $grey
+        @media (prefers-color-scheme: dark)
+            color: $font-color-dark
+
         transition: color .5s ease
         list-style-type: none
 

@@ -12,18 +12,18 @@ export default class NewBanner extends React.Component {
                         <h4>Department of Computer Science, North Carolina State University</h4>
                         <ul>
                             <li>
-                                <a style={{textDecoration: "none", color: "black"}}href="mailto:r.yedida@pm.me">
+                                <a style={{textDecoration: "none"}}href="mailto:r.yedida@pm.me">
                                     E-mail
                                 </a>
                                 <i className="fas fa-arrow-right"></i>
                             </li>
                             <li>
-                                <a style={{textDecoration: "none", color: "black"}} href="https://scholar.google.com/citations?user=0lP2AvkAAAAJ&hl=en">
+                                <a style={{textDecoration: "none"}} href="https://scholar.google.com/citations?user=0lP2AvkAAAAJ&hl=en">
                                     Google Scholar
                                 </a>
                                 <i className="fas fa-arrow-right"></i></li>
                             <li>
-                                <a style={{textDecoration: "none", color: "black"}}href="https://github.com/yrahul3910">
+                                <a style={{textDecoration: "none"}}href="https://github.com/yrahul3910">
                                     GitHub
                                 </a>
                                 <i className="fas fa-arrow-right"></i>

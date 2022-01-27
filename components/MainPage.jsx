@@ -44,7 +44,7 @@ export default class MainPage extends React.Component {
                     </section>
                     <section id="research" className="blue-background">
                         <h1>Research Interests</h1>
-                        <h3>My publications are available at <Link to="/publications">ryedida.me/publications</Link>. Click a card to expand/collapse.</h3>
+                        <h3>My publications are available at <Link style={{color: "white"}} to="/publications">ryedida.me/publications</Link>. Click a card to expand/collapse.</h3>
                         <CardGrid cards={researchInterests} />
                     </section>
                     <section id="projects" className="green-background">

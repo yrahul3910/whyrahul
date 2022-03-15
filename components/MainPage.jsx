@@ -34,7 +34,7 @@ export default class MainPage extends React.Component {
                 <NewBanner />
                 <main>
                     <div className="picture">
-                        <img src="assets/profile.jpg" alt="Profile" />
+                        <img src="profile.jpg" alt="Profile" />
                     </div>
                     <div className="content">
                         <div className="intro">

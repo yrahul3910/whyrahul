@@ -1,7 +1,6 @@
 import React from "react";
 
 import NewBanner from "./NewBanner.jsx";
-import StickyNav from "./StickyNav.jsx";
 import CardGrid from "./CardGrid.jsx";
 import ScrollToTop from "./ScrollToTop.jsx";
 import { Link } from "react-router-dom";
@@ -33,34 +32,23 @@ export default class MainPage extends React.Component {
             <div>
                 <ScrollToTop />
                 <NewBanner />
-                <StickyNav />
                 <main>
-                    <section id="resume" className="red-background">
-                        <h1>Resume / CV</h1>
-                        <h3 style={{color: "white"}}>
-                            Looking to hire? I am qualified for the roles below. Click a card to expand/collapse.
-                        </h3>
-                        <CardGrid cards={resumeCards} />
-                    </section>
-                    <section id="research" className="blue-background">
-                        <h1>Research Interests</h1>
-                        <h3>My publications are available at <Link style={{color: "white"}} to="/publications">ryedida.me/publications</Link>. Click a card to expand/collapse.</h3>
-                        <CardGrid cards={researchInterests} />
-                    </section>
-                    <section id="projects" className="green-background">
-                        <h1>Projects</h1>
-                        <p>
-                            Below is a sample of my projects. For a more comprehensive list of my notable projects, please view my CV.
-                        </p>
-                        <CardGrid cards={projects} />
-                    </section>
-                    <section id="contact" className="red-background">
-                        <h1>Contact</h1>
-                        <p>
-                            Please contact me by clicking on any of the following links.
-                        </p>
-                        <CardGrid active={true} cards={contacts} />
-                    </section>
+                    <div className="picture">
+                        <img src="profile.jpg" alt="Profile" />
+                    </div>
+                    <div className="content">
+                        <div className="intro">
+                            Hi! I&apos;m Ranjani Ramanathan.
+                        </div>
+                        <div className="detail">
+                            <p>
+                                I am a graduate student in Management Information Systems at <a href="https://tamu.edu">Texas A&amp;M University</a>. My interests lie in XYZ.
+                            </p>
+                            <p>
+                                Previously, I worked at Cisco as a Network Engineer for 2.5 years.
+                            </p>
+                        </div>
+                    </div>
                 </main>
             </div>
         );

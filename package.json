@@ -2,7 +2,7 @@
   "name": "personal-site",
   "version": "1.0.0",
   "description": "Personal Website",
-  "homepage": "http://yrahul3910.github.io/whyrahul",
+  "homepage": "http://ranjaniram.com",
   "scripts": {
     "lint": "eslint .",
     "watch": "webpack --watch",
@@ -12,8 +12,8 @@
     "postdist": "cp assets/* dist/",
     "start": "webpack-dev-server",
     "predeploy": "npm run dist",
-    "deploy": "cp dist/* ../yrahul3910.github.io/",
-    "postdeploy": "cd ../yrahul3910.github.io/ && git commit -am 'Update' && git push"
+    "deploy": "cp dist/* ../ranjani125.github.io/",
+    "postdeploy": "cd ../ranjani125.github.io/ && git commit -am 'Update' && git push"
   },
   "devDependencies": {
     "babel-cli": "^6.18.0",
@@ -40,7 +40,7 @@
     "webpack-dev-server": "^3.11.0"
   },
   "keywords": [],
-  "author": "Rahul Yedida",
+  "author": "Ranjani Ramanathan",
   "license": "MIT",
   "dependencies": {
     "call-bind": "^1.0.2",

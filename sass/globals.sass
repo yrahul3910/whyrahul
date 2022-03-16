@@ -1,11 +1,9 @@
 $background: #f6f6f6
 $font-color: #6d6d6d
-$bold-font: black
 
 // Dark mode colors
-$background-dark: #222
-$font-color-dark: #c2c2c2
-$bold-font-dark: #ebebeb
+$background-dark: rgb(13, 17, 23)
+$font-color-dark: $background
 
 $font-family: 'Raleway', sans-serif
 $line-height: 28px
@@ -85,11 +83,7 @@ a
     font-size: 0.9rem
 
 .heading
-    @media screen and (prefers-color-scheme: light)
-        color: $bold-font
-    @media screen and (prefers-color-scheme: dark)
-        color: $bold-font-dark
-
+    color: black
     letter-spacing: 5px
     text-transform: uppercase
     margin-left: 6vw
@@ -100,19 +94,10 @@ a
 main
     @media screen and (min-width: 481px)
         width: 60vw
-
-    @media screen and (prefers-color-scheme: light)
-        background: white
-    @media screen and (prefers-color-scheme: dark)
-        background: #333
-
+        
+    background: white
     border-radius: 20px
-
-    @media screen and (prefers-color-scheme: light)
-        border-color: #e6e6e6
-    @media screen and (prefers-color-scheme: dark)
-        border-color: #5d5d5d
-
+    border-color: #e6e6e6
     border-style: solid
     border-width: 1px
     
@@ -132,17 +117,9 @@ main
             padding: 2rem 0
             font-weight: bold
             font-size: 1.75rem
-            @media screen and (prefers-color-scheme: light)
-                color: $bold-font
-            @media screen and (prefers-color-scheme: dark)
-                color: $bold-font-dark
+            color: black
         
         .detail
             line-height: 1.8
-
-            @media screen and (prefers-color-scheme: light)
-                color: $font-color
-            @media screen and (prefers-color-scheme: dark)
-                color: $font-color-dark
 
 @import grid

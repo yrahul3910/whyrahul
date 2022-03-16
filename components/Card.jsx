@@ -17,11 +17,11 @@ export default class Card extends React.Component {
     render() {
         let cName = (this.props.active ? "visible" : "");
         return <div className="card">
-            <h2 className="card-title" id={this.props.title.replace(" ", "")} onClick={this.click}>
+            <h2 className="card-title" id={this.props.title.replace(' ', '')} onClick={this.click}>
                 {this.props.title}
             </h2>
-            <div id={"div" + this.props.title.replace(" ", "")} className={cName}>{this.props.info}</div>
-        </div>;
+            <div id={"div" + this.props.title.replace(' ', '')} className={cName}>{this.props.info}</div>
+        </div>
     }
 }
 
@@ -29,4 +29,4 @@ Card.propTypes = {
     title: PropTypes.string.isRequired,
     info: PropTypes.any.isRequired,
     active: PropTypes.bool
-};
+}

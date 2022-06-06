@@ -32,6 +32,7 @@ export default class MainPage extends React.Component {
         return (
             <div>
                 <ScrollToTop />
+                <h1 className="name">Rahul Yedida</h1>
                 <NewBanner />
                 <StickyNav />
                 <main>
@@ -47,18 +48,15 @@ export default class MainPage extends React.Component {
                         <h3>My publications are available at <Link style={{color: "white"}} to="/publications">ryedida.me/publications</Link>. Click a card to expand/collapse.</h3>
                         <CardGrid cards={researchInterests} />
                     </section>
-                    <section id="projects" className="green-background">
+                    <section id="projects" className="red-background">
                         <h1>Projects</h1>
                         <p>
                             Below is a sample of my projects. For a more comprehensive list of my notable projects, please view my CV.
                         </p>
                         <CardGrid cards={projects} />
                     </section>
-                    <section id="contact" className="red-background">
+                    <section id="contact" className="darkgray-background">
                         <h1>Contact</h1>
-                        <p>
-                            Please contact me by clicking on any of the following links.
-                        </p>
                         <CardGrid active={true} cards={contacts} />
                     </section>
                 </main>

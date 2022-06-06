@@ -2,6 +2,18 @@ import React from "react";
 
 export default [
     {
+        title: "raise-utils",
+        info:
+            <div>
+                <p>
+                    A Python package written to centralize the implementations of our lab&apos;s algorithms. Currently at 12k downloads.
+                </p>
+                <p>
+                    <b>Link: </b><a href="https://pypi.org/project/raise-utils/">PyPI</a> and <a href="https://github.com/yrahul3910/raise">Code</a>
+                </p>
+            </div>
+    }, 
+    {
         title: "NearConnect",
         info:
             <div>

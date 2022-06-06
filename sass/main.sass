@@ -4,7 +4,7 @@ main
         font-size: 36px
         text-align: center
         margin-bottom: $margin
-    
+        
     // Styling for sections
     section
         padding: $margin
@@ -20,24 +20,18 @@ main
 
             h1, h3, p
                 color: white
+
+        &.darkgray-background
+            background-color: #24292e
+
+            h1, h3, p
+                color: white
         
         &.grey-background
             background-color: $grey
 
             h1, p
                 color: white
-        
-        &.green-background
-            @media (prefers-color-scheme: light)
-                background-color: $green
-            @media (prefers-color-scheme: dark)
-                background-color: $green-dark
-
-            h1, p
-                @media (prefers-color-scheme: light)
-                    color: $font-color
-                @media (prefers-color-scheme: dark)
-                    color: $font-color-dark
         
         // Special styling for Contact section
         &#contact
@@ -76,3 +70,9 @@ main
             position: relative
             top: 5px
             margin-right: 5px
+
+h1.name
+    text-transform: uppercase
+    font-weight: bold
+    text-align: center
+    margin-top: 10vh

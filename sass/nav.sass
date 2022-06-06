@@ -60,17 +60,20 @@
         opacity: 0
 
 .split-box
-    display: flex
+    display: grid
+    gap: 10vw
     justify-content: center
 
-#background-picture
-    background-image: url("/profile.jpg")
-    border-radius: 50%
-
     @media screen and (min-width: 1024px)
-        width: 10vw
+        grid-template-columns: 1fr 1fr
     @media screen and (max-width: 1023px)
-        width: 20vw
+        grid-template-columns: 1fr
+
+#background-picture
+    @media screen and (min-width: 1024px)
+        width: 22vw
+    @media screen and (max-width: 1023px)
+        width: 70vw
     margin-top: 5vh
 
 .nav
@@ -80,15 +83,14 @@
         background-color: $background-dark
 
     color: $grey
-    min-height: calc(100vh - 51px) // 51px is the height of the nav
+
+    @media screen and (min-width: 1024px)
+        min-height: calc(100vh - 51px) // 51px is the height of the nav
 
     display: flex
     flex-direction: column
     justify-content: center
     align-items: center
-
-    &:nth-child(2)
-        background-color: $lightgrey
 
     @media screen and (min-width: 320px) and (max-width: 480px)
         font-size: 0.7rem
@@ -107,6 +109,14 @@
         align-items: center
 
         margin-bottom: 30px
+
+        p
+            text-align: left
+
+            @media screen and (min-width: 1024px)
+                max-width: 35vw
+            @media screen and (max-width: 1023px)
+                max-width: 70vw
 
         ul
           list-style: none

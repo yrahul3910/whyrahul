@@ -5,14 +5,19 @@ export default class NewBanner extends React.Component {
         return (
             <div className="split-box" id="top">
                 <div className="nav">
+                    <img id="background-picture" src="/profile.jpg" />
+                </div>
+                <div className="nav">
                     <div id="banner-profile" className="profile-details">
-                        <img id="background-picture" src="/profile.jpg" />
-                        <h1>Rahul Yedida</h1>
-                        <h3>Ph.D. Student</h3>
-                        <h4>Department of Computer Science, North Carolina State University</h4>
+                        <h3>About</h3>
+                        <p>
+                            I am a 4th year Ph.D. candidate in CS at NC State University, specializing in feedforward networks applied to SE. 
+                            I am currently an SDE Intern at Amazon, Bellevue. In my free time, I geek out on coffee and 
+                            listen to Taylor Swift.
+                        </p>
                         <ul>
                             <li>
-                                <a style={{textDecoration: "none"}}href="mailto:r.yedida@pm.me">
+                                <a style={{textDecoration: "none"}} href="mailto:r.yedida@pm.me">
                                     E-mail
                                 </a>
                                 <i className="fas fa-arrow-right"></i>
@@ -23,12 +28,17 @@ export default class NewBanner extends React.Component {
                                 </a>
                                 <i className="fas fa-arrow-right"></i></li>
                             <li>
-                                <a style={{textDecoration: "none"}}href="https://github.com/yrahul3910">
+                                <a style={{textDecoration: "none"}} href="https://github.com/yrahul3910">
                                     GitHub
                                 </a>
                                 <i className="fas fa-arrow-right"></i>
                             </li>
-
+                            <li>
+                                <a style={{textDecoration: "none"}} href="https://www.linkedin.com/in/rahul-yedida/">
+                                    LinkedIn
+                                </a>
+                                <i className="fas fa-arrow-right"></i>
+                            </li>
                         </ul>
                     </div>
                 </div>

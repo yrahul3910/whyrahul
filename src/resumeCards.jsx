@@ -40,18 +40,5 @@ export default [
                     <a href="https://github.com/yrahul3910/resume/raw/master/pdf/Software.pdf">Download</a>
                 </p>
             </div>
-    },
-    {
-        title: "Other Roles",
-        info:
-            <div>
-                <p>My resumes for other roles.</p>
-                <p>
-                    <b>Desktop Developer: </b><a href="https://github.com/yrahul3910/resume/raw/master/pdf/Desktop.pdf">Download</a>
-                </p>
-                <p>
-                    <b>iOS Developer: </b><a href="https://github.com/yrahul3910/resume/raw/master/pdf/iOS.pdf">Download</a>
-                </p>
-            </div>
-    },
+    }
 ];

@@ -47,7 +47,7 @@
     "gh-pages": "^2.0.1",
     "ghspa": "^1.0.0",
     "lodash": "^4.17.19",
-    "moment": "^2.22.2",
+    "moment": "^2.29.4",
     "react-router-dom": "^4.3.1"
   }
 }

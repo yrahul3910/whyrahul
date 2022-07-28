@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "./Header.jsx";
 
-class Main extends React.Component {
+export default class SendToFuture extends React.Component {
     render() {
         return (
             <div style={{margin: "50px", height: "100vh"}}>
@@ -10,7 +10,3 @@ class Main extends React.Component {
         );
     }
 }
-
-module.exports = {
-    Main
-};

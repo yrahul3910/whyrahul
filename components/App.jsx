@@ -1,9 +1,9 @@
 import React from "react";
-import { Switch, Route, Redirect } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 
 import MainPage from "./MainPage.jsx";
 import NotFound from "./NotFound.jsx";
-import { Main as SendToFuture } from "./sendtofuture/Main.jsx";
+import SendToFuture from "./sendtofuture/Main.jsx";
 import Privacy from "./sendtofuture/Privacy.jsx";
 
 export default class App extends React.Component {

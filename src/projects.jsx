@@ -21,7 +21,7 @@ export default [
                     A native iOS app written using SwiftUI to discover and connect with nearby peers.
                 </p>
                 <p>
-                    <b>Link: </b><a href="https://nearconnect.us">Website</a> and <a href="https://github.com/yrahul3910/SocialQR">Code</a>
+                    <b>Link: </b><a href="https://github.com/yrahul3910/SocialQR">Code</a>
                 </p>
             </div>
     },
@@ -45,18 +45,6 @@ export default [
                 </p>
                 <p>
                     <b>Link: </b><a href="https://codepen.io/yrahul">CodePen</a>
-                </p>
-            </div>
-    },
-    {
-        title: "Productivity",
-        info: 
-            <div>
-                <p>
-                    A productivity application using VB.NET with a Facebook blocker, task prioritizer, flash cards, to-do list, and more.
-                </p>
-                <p>
-                    <b>Links: </b><a href="https://github.com/yrahul3910/productivity">Code</a> and <a href="https://www.softpedia.com/get/Office-tools/Diary-Organizers-Calendar/Productivity.shtml">Software</a>
                 </p>
             </div>
     },

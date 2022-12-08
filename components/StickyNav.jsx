@@ -11,6 +11,11 @@ export default class StickyNav extends React.Component {
         el.scrollIntoView({block: "start", behavior: "smooth"});
     }
 
+    interests() {
+        let el = document.getElementById("interests");
+        el.scrollIntoView({block: "start", behavior: "smooth"});
+    }
+
     contact() {
         let el = document.getElementById("contact");
         el.scrollIntoView({block: "start", behavior: "smooth"});
@@ -32,6 +37,7 @@ export default class StickyNav extends React.Component {
             <li onClick={this.resume}>Resume</li>
             <li onClick={this.research}>Research</li>
             <li onClick={this.project}>Projects</li>
+            <li onClick={this.interests}>Interests</li>
             <li><a href="https://blog.ryedida.me/">Blog</a></li>
             <li onClick={this.contact}>Contact</li>
         </ul>;

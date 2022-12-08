@@ -10,6 +10,7 @@ import researchInterests from "../src/research_interests.jsx";
 import contacts from "../src/contacts.jsx";
 import projects from "../src/projects.jsx";
 import resumeCards from "../src/resumeCards.jsx";
+import personalInterests from "../src/personal_interests.jsx";
 
 export default class MainPage extends React.Component {
     constructor(props) {
@@ -54,6 +55,10 @@ export default class MainPage extends React.Component {
                             Below is a sample of my projects. For a more comprehensive list of my notable projects, please view my CV.
                         </p>
                         <CardGrid cards={projects} />
+                    </section>
+                    <section id="interests" className="blue-background">
+                        <h1>Personal Interests</h1>
+                        <CardGrid cards={personalInterests} />
                     </section>
                     <section id="contact" className="darkgray-background">
                         <h1>Contact</h1>

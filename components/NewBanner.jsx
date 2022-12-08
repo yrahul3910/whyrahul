@@ -12,12 +12,12 @@ export default class NewBanner extends React.Component {
                         <h3>About</h3>
                         <p>
                             I am a 4th year Ph.D. candidate in CS at NC State University, specializing in feedforward networks applied to SE. 
-                            I am currently an SDE Intern at Amazon, Bellevue. In my free time, I geek out on coffee and 
+                            In my free time, I geek out on coffee and 
                             listen to Taylor Swift.
                         </p>
                         <ul>
                             <li>
-                                <a style={{textDecoration: "none"}} href="mailto:r.yedida@pm.me">
+                                <a style={{textDecoration: "none"}} href="mailto:hello@ryedida.me">
                                     E-mail
                                 </a>
                                 <i className="fas fa-arrow-right"></i>

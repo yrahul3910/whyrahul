@@ -9,7 +9,7 @@ export default [
                     <i className="fab fa-skype"></i>
                     y.rahul@outlook.com
                 </div>
-                <a href="mailto:r.yedida@pm.me">
+                <a href="mailto:hello@ryedida.me">
                     <i className="fas fa-envelope"></i>
                     E-mail
                 </a>

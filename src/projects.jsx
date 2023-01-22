@@ -2,6 +2,19 @@ import React from "react";
 
 export default [
     {
+        title: "pysh",
+        info:
+            <div>
+                <p>
+                    A superset of Python that allows inline evaluation of Shell commands. I wrote the transpiler and a VS Code extension for 
+                    syntax highlighting.
+                </p>
+                <p>
+                    <b>Link: </b><a href="https://github.com/yrahul3910/pysh">GitHub</a>
+                </p>
+            </div>
+    },
+    {
         title: "raise-utils",
         info:
             <div>

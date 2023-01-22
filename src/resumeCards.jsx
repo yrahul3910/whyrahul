@@ -20,19 +20,10 @@ export default [
                     My resume for ML Engineer, ML Research Scientist, and related positions is below.
                 </p>
                 <p>
-                    <a href="https://github.com/yrahul3910/resume/raw/master/pdf/ML.pdf">Download</a>
-                </p>
-            </div>
-    },
-    {
-        title: "Full-Stack Web Developer",
-        info:
-            <div>
-                <p>My expertise in web development lies in the MERN stack, although I have also used Flask and .NET Core previously.
-                    My resume for full-stack web developer roles is below.
+                    <a href="https://github.com/yrahul3910/resume/raw/master/pdf/mle.pdf">ML Engineer</a>
                 </p>
                 <p>
-                    <a href="https://github.com/yrahul3910/resume/raw/master/pdf/Web.pdf">Download</a>
+                    <a href="https://github.com/yrahul3910/resume/raw/master/pdf/rs.pdf">Research Scientist</a>
                 </p>
             </div>
     },
@@ -42,7 +33,7 @@ export default [
             <div>
                 <p>My resume for software developer roles is below.</p>
                 <p>
-                    <a href="https://github.com/yrahul3910/resume/raw/master/pdf/Software.pdf">Download</a>
+                    <a href="https://github.com/yrahul3910/resume/raw/master/pdf/sde.pdf">Download</a>
                 </p>
             </div>
     }

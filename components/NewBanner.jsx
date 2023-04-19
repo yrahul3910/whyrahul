@@ -6,6 +6,7 @@ export default class NewBanner extends React.Component {
             <div className="split-box" id="top">
                 <div className="nav">
                     <img
+                        fetchpriority="high"
                         id="background-picture"
                         srcSet="profile-400w.webp 400w, profile-600w.webp 600w, profile-800w.webp 800w, profile-1000w.webp 1000w, profile-1200w.webp 1200w, profile-1600w.webp 1600w, profile-2000w.webp 2000w"
                         sizes="(max-width: 400px) 400px, (max-width: 600px) 600px, (max-width: 800px) 800px, (max-width: 1000px) 1000px, (max-width: 1200px) 1200px, (max-width: 1600px) 1600px, (min-width: 1601px) 2000px"

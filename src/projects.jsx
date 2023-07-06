@@ -6,7 +6,7 @@ export default [
         info:
             <div>
                 <p>
-                    A superset of Python that allows inline evaluation of Shell commands. I wrote the transpiler and a VS Code extension for 
+                    A superset of Python that allows inline evaluation of Shell commands. I wrote the transpiler and a VS Code extension for
                     syntax highlighting.
                 </p>
                 <p>
@@ -19,39 +19,16 @@ export default [
         info:
             <div>
                 <p>
-                    A Python package written to centralize the implementations of our lab&apos;s algorithms. Currently at 12k downloads.
+                    A Python package written to centralize the implementations of our lab&apos;s algorithms. Currently at <a href="https://pepy.tech/project/raise-utils">19k downloads</a>.
                 </p>
                 <p>
                     <b>Link: </b><a href="https://pypi.org/project/raise-utils/">PyPI</a> and <a href="https://github.com/yrahul3910/raise">Code</a>
                 </p>
             </div>
-    }, 
-    {
-        title: "NearConnect",
-        info:
-            <div>
-                <p>
-                    A native iOS app written using SwiftUI to discover and connect with nearby peers.
-                </p>
-                <p>
-                    <b>Link: </b><a href="https://github.com/yrahul3910/SocialQR">Code</a>
-                </p>
-            </div>
-    },
-    {
-        title: "Xtreme Calculations",
-        info: 
-            <div>
-                <p>
-                    A math application that got over 20K downloads, with calculus and advanced functions and an easy-to-use interface. This was my first software, developed using VB.NET--which I still strongly believe is an excellent beginner language.
-                </p>
-                <p>
-                    <b>Links: </b><a href="https://www.softpedia.com/get/Science-CAD/Xtreme-Calculations.shtml">Software</a>                </p>
-            </div>
     },
     {
         title: "Web Development Mini-Projects",
-        info: 
+        info:
             <div>
                 <p>
                     While learning web development at FreeCodeCamp, I developed several small projects using the MERN stack, including a URL shortener, a voting application, a rogue-like dungeon crawler game, a Simon game, and several visualization projects using D3.js
@@ -63,7 +40,7 @@ export default [
     },
     {
         title: "JournalBear",
-        info: 
+        info:
             <div>
                 <p>
                     A cross-platform journal application built with Electron, encrypted by AES-256.
@@ -75,19 +52,19 @@ export default [
     },
     {
         title: "Human Activity Data Project",
-        info: 
+        info:
             <div>
                 <p>
                     This is a fun side project I worked on. For around 10 months, I collected data on every single activity I do, with a total of 30 activity categories. I then used this data to analyze my most productive hours and built a 2-layer LSTM to predict my next activity based on the previous five.
                 </p>
                 <p>
-                    <b>Link: </b><a href="https://github.com/yrahul3910/ActivityDataProject">GitHub repository</a>.
+                    <b>Links: </b><a href="https://github.com/yrahul3910/ActivityDataProject">Time Meter (Android)</a> | <a href="https://github.com/yrahul3910/atracker-analysis">ATracker (iOS)</a>
                 </p>
             </div>
     },
     {
         title: "Machine Learning Blog",
-        info: 
+        info:
             <div>
                 <p>
                     A blog to teach machine learning to beginners in a way I believe that I would have found helpful when I had started, making sure it has the mathematical rigor, but also an intuitive explanation, and Python code.

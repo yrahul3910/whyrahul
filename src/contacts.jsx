@@ -5,10 +5,6 @@ export default [
         title: "Direct contact",
         info: (
             <div>
-                <div>
-                    <i className="fab fa-skype"></i>
-                    y.rahul@outlook.com
-                </div>
                 <a href="mailto:hello@ryedida.me">
                     <i className="fas fa-envelope"></i>
                     E-mail
@@ -33,7 +29,7 @@ export default [
                         Google Scholar
                     </a>
                 </div>
-                <div>                    
+                <div>
                     <a href="https://www.linkedin.com/in/rahul-yedida/">
                         <i className="fab fa-linkedin-in"></i>
                         LinkedIn
@@ -52,7 +48,7 @@ export default [
                         @rahulyedida13
                     </a>
                 </div>
-                
+
             </div>
         )
     }

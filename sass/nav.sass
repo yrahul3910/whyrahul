@@ -124,19 +124,15 @@
           flex-wrap: wrap
 
           li
+              margin: 10px
               @media (prefers-color-scheme: dark)
                   background-color: $grey
-              @media (prefers-color-scheme: light)
-                  margin: 10px 0
-              @media (prefers-color-scheme: dark)
-                  margin: 10px
-                
+
               a
                   @media (prefers-color-scheme: dark)
                       color: $font-color-dark
 
               font-size: 18px
-              margin: 10px 0
               width: 200px
 
               @media screen and (min-width: 1024px)
@@ -146,7 +142,7 @@
 
               @media screen and (min-width: 1024px)
                   text-align: center
-              
+
               @media (prefers-color-scheme: light)
                   border-color: white
               @media (prefers-color-scheme: dark)
@@ -231,7 +227,7 @@
         @media (prefers-color-scheme: light)
             color: $grey
         @media (prefers-color-scheme: dark)
-            color: white
+            color: $font-color-dark
 
         text-decoration: none !important
 

@@ -12,9 +12,9 @@ export default [
                 </p>
                 <p><b>Recent papers:</b></p>
                 <ul>
+                    <li>Automatically suggesting microservice architectures for monoliths: <a href="https://arxiv.org/pdf/2109.14569">Paper</a></li>
                     <li>GHOST: Improving deep learning for defect prediction: <a href="https://arxiv.org/abs/2008.03835">Paper</a> | <a href="https://ryedida.cc/ghost">Code</a></li>
-                    <li>SIMPLE: Issue lifetime prediction: <a href="https://ryedida.cc/simple">Paper</a> | <a href="https://ryedida.cc/simple-code">Code</a></li>
-                    <li>Department of Reuse: <a href="https://arxiv.org/pdf/2108.06821">Paper</a> | <a href="https://ryedida.cc/dor">Website</a> | <a href="https://ryedida.cc/dor-kappa">Statistics</a></li>
+                    <li>Department of Reuse: <a href="https://arxiv.org/pdf/2108.06821">Paper</a> | <a href="https://reuse-dept.org/">Website</a> | <a href="https://github.com/department-of-reuse/DoR/tree/main">Code</a></li>
                 </ul>
                 <br/>
             </div>
@@ -27,21 +27,10 @@ export default [
                 <p>I work on theoretical and applied deep learning, especially with loss functions.</p>
                 <p><b>Recent papers:</b></p>
                 <ul>
+                    <li>Sample-efficient hyper-parameter optimization (under review)</li>
                     <li><a href="https://arxiv.org/abs/1902.07399">Adaptive learning rates for deep learning</a></li>
                     <li><a href="https://arxiv.org/abs/1906.01975">Novel activation function</a></li>
                 </ul>
-            </div>
-        )
-    },
-    {
-        title: "AI in Medicine",
-        info: (
-            <div>
-                <p>
-                    I worked on the application of neural text processing systems to medical science; specifically,
-                    I applied a language model to perform text mining to identify potential novel cures for rare
-                    diseases.
-                </p>
             </div>
         )
     }

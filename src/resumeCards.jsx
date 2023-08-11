@@ -20,10 +20,7 @@ export default [
                     My resume for ML Engineer, ML Research Scientist, and related positions is below.
                 </p>
                 <p>
-                    <a href="https://github.com/yrahul3910/resume/raw/master/pdf/mle.pdf">ML Engineer</a>
-                </p>
-                <p>
-                    <a href="https://github.com/yrahul3910/resume/raw/master/pdf/rs.pdf">Research Scientist</a>
+                    <a href="https://github.com/yrahul3910/resume/raw/master/pdf/ml.pdf">CV</a>
                 </p>
             </div>
     },

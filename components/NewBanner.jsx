@@ -18,7 +18,7 @@ export default class NewBanner extends React.Component {
                     <div id="banner-profile" className="profile-details">
                         <h3>About</h3>
                         <p>
-                            I am a 5<sup>th</sup> year Ph.D. candidate in CS at NC State University, specializing in feedforward networks applied to SE.
+                            I am a 5<sup>th</sup> year Ph.D. candidate in CS at NC State University, specializing in deep learning applied to SE.
                             In my free time, I geek out on coffee and
                             listen to Taylor Swift.
                         </p>

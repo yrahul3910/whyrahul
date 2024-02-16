@@ -22,12 +22,13 @@ export default [
         )
     },
     {
-        title: "Deep Learning",
+        title: "Theory-Driven Deep Learning",
         info: (
             <div>
                 <p>I work on theoretical and applied deep learning, especially with loss functions.</p>
                 <p><b>Sample papers:</b></p>
                 <ul>
+                    <li><a href="https://arxiv.org/abs/2402.05025">Efficient HPO using strong convexity</a></li>
                     <li><a href="https://arxiv.org/abs/1902.07399">Adaptive learning rates for deep learning</a></li>
                     <li><a href="https://arxiv.org/abs/1906.01975">Novel activation function</a></li>
                 </ul>

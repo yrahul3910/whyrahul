@@ -28,7 +28,8 @@ export default [
         title: "Software Developer",
         info:
             <div>
-                <p>My resume for software developer roles is below.</p>
+                <p>I have worked on multiple full-stack solutions using React/TypeScript and various database and server systems.
+                    My resume for software developer roles is below.</p>
                 <p>
                     <a href="https://github.com/yrahul3910/resume/raw/master/pdf/sde.pdf">Download</a>
                 </p>

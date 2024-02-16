@@ -16,10 +16,10 @@ export default [{
         <img style={{ width: "80%", height: "auto" }} loading="lazy" src="/taylor.jpeg" />
         <p>
             I&apos;ve been a big fan of Taylor Swift since 2018! My favorite era is the Lover era, although I currently have
-            Midnights on repeat. My current favorite songs (in no particular order) are <i>Hits Different,</i>
-            <i>Cruel Summer,</i> <i>All Too Well (10 Minute Version) [Taylor&apos; Version] (From The Vault),</i>
+            evermore on repeat. My current favorite songs (in no particular order) are <i>Hits Different,</i>
+            <i>Cruel Summer (Live),</i> <i>Nothing New (Taylor&apos; Version) (From The Vault),</i>
             <i>I Can See You (Taylor&apos; Version) (From The Vault),</i> <i>You&apos;re On Your Own, Kid,</i>
-            <i>Foolish One (Taylor&apos; Version) (From The Vault),</i> although this list frequently changes.
+            <i>gold rush,</i> although this list frequently changes. Yes, I&apos;m excited for TTPD!
         </p>
     </>
 }, {

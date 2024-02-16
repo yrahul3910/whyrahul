@@ -2,6 +2,19 @@ import React from "react";
 
 export default [
     {
+        title: "Programmable Resumes",
+        info:
+            <div>
+                <p>
+                    Not quite satisfied with the flexibility of existing resume solutions, I developed a syntax for modular resumes that are far more customizable and allow
+                    for generating multiple CVs in parallel. My CVs above are generated using this syntax.
+                </p>
+                <p>
+                    <b>Link: </b><a href="https://github.com/yrahul3910/programmable-resumes/">GitHub</a>
+                </p>
+            </div>
+    },
+    {
         title: "pysh",
         info:
             <div>
@@ -19,7 +32,7 @@ export default [
         info:
             <div>
                 <p>
-                    A Python package written to centralize the implementations of our lab&apos;s algorithms. Currently at <a href="https://pepy.tech/project/raise-utils">19k downloads</a>.
+                    A Python package written to centralize the implementations of our lab&apos;s algorithms. Currently at <a href="https://pepy.tech/project/raise-utils">24k downloads</a>.
                 </p>
                 <p>
                     <b>Link: </b><a href="https://pypi.org/project/raise-utils/">PyPI</a> and <a href="https://github.com/yrahul3910/raise">Code</a>

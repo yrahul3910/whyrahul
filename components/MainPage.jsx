@@ -52,7 +52,7 @@ export default class MainPage extends React.Component {
                     <section id="projects" className="red-background">
                         <h1>Projects</h1>
                         <p>
-                            Below is a sample of my projects. For a more comprehensive list of my notable projects, please view my CV.
+                            Below is a sample of my projects. For a more comprehensive list of my notable projects, please view my <a href="https://github.com/yrahul3910/resume/blob/master/pdf/master.pdf">master CV</a>.
                         </p>
                         <CardGrid cards={projects} />
                     </section>

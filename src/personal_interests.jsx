@@ -19,7 +19,7 @@ export default [{
             evermore on repeat. My current favorite songs (in no particular order) are <i>Hits Different,</i>
             <i>Cruel Summer (Live),</i> <i>Nothing New (Taylor&apos; Version) (From The Vault),</i>
             <i>I Can See You (Taylor&apos; Version) (From The Vault),</i> <i>You&apos;re On Your Own, Kid,</i>
-            <i>gold rush,</i> although this list frequently changes. Yes, I&apos;m excited for TTPD!
+            and <i>gold rush,</i> although this list frequently changes. Yes, I&apos;m excited for TTPD!
         </p>
     </>
 }, {

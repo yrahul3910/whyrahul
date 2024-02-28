@@ -22,6 +22,9 @@ export default class NewBanner extends React.Component {
                             In my free time, I geek out on coffee and
                             listen to Taylor Swift.
                         </p>
+                        <p style={{ color: "red", fontWeight: "bold" }}>
+                            I am currently on the job market! Please reach out to me for research scientist, tenure-track assistant professor, and software developer roles.
+                        </p>
                         <ul>
                             <li>
                                 <a style={{textDecoration: "none"}} href="mailto:hello@ryedida.me">

@@ -2,6 +2,18 @@ import React from "react";
 
 export default [
     {
+        title: "Zotero RAG System",
+        info:
+            <div>
+                <p>
+                    A work-in-progress, I'm building a RAG (Retrieval-Augmented Generation) system for my growing Zotero library, which has gotten unmanageably large. The final vision is a system that can fetch references based on descriptions of papers and a QA system that is grounded in references. I'm writing this in Rust, partially to learn the language, but also to use a low-level language so I understand details of how things work without abstractions. As part of this project, I'm writing a simple PDF parser that extracts text and parses equations from academic PDFs.
+                </p>
+                <p>
+                    <b>Link: </b><a href="https://github.com/yrahul3910/zotero-rag">GitHub</a>
+                </p>
+            </div>
+    },
+    {
         title: "Programmable Resumes",
         info:
             <div>
@@ -32,7 +44,7 @@ export default [
         info:
             <div>
                 <p>
-                    A Python package written to centralize the implementations of our lab&apos;s algorithms. Currently at <a href="https://pepy.tech/project/raise-utils">24k downloads</a>.
+                    A Python package written to centralize the implementations of our lab&apos;s algorithms. Currently at <a href="https://pepy.tech/project/raise-utils">50k downloads</a>.
                 </p>
                 <p>
                     <b>Link: </b><a href="https://pypi.org/project/raise-utils/">PyPI</a> and <a href="https://github.com/yrahul3910/raise">Code</a>
@@ -40,7 +52,7 @@ export default [
             </div>
     },
     {
-        title: "Web Development Mini-Projects",
+        title: "Web Dev Mini-Projects",
         info:
             <div>
                 <p>

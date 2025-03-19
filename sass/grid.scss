@@ -1,0 +1,65 @@
+.grid-parent {
+  display: grid;
+
+  @media screen and (width >= 1025px) {
+    grid-template-columns: 25vw 25vw 25vw;
+    grid-template-rows: auto auto;
+  }
+
+  @media screen and (width >= 481px) and (width <= 1024px) {
+    grid-template-columns: 40vw 40vw;
+  }
+
+  @media screen and (width >= 320px) and (width <= 480px) {
+    grid-template-columns: 80vw;
+  }
+
+  grid-gap: 5vh 5vw;
+  margin-bottom: 50px;
+
+  .card {
+    @media (prefers-color-scheme: light) {
+      background-color: white;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      background-color: $medgrey;
+    }
+
+    border: 4px solid grey;
+    padding: 20px;
+
+    li {
+      @media (prefers-color-scheme: dark) {
+        color: $font-color !important;
+      }
+    }
+
+    // When active, the card should span 2 rows.
+    &.active {
+      grid-row-end: span 2;
+    }
+
+    h2 {
+      cursor: pointer;
+    }
+
+    h2,
+    p {
+      color: $font-color !important;
+    }
+
+    .card-title {
+      font-size: 1.25rem;
+    }
+
+    // Initially, don't display any content in the cards.
+    & > div {
+      display: none;
+
+      &.visible {
+        display: initial;
+      }
+    }
+  }
+}

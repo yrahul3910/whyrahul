@@ -1,6 +1,7 @@
 import React from "react";
 
 import NewBanner from "./NewBanner.jsx";
+import Publication from "./Publication.tsx";
 import StickyNav from "./StickyNav.jsx";
 import CardGrid from "./CardGrid.jsx";
 import ScrollToTop from "./ScrollToTop.jsx";
@@ -11,6 +12,7 @@ import contacts from "../src/contacts.jsx";
 import projects from "../src/projects.jsx";
 import resumeCards from "../src/resumeCards.jsx";
 import personalInterests from "../src/personal_interests.jsx";
+import publications from "../src/publications.jsx";
 
 export default class MainPage extends React.Component {
     constructor(props) {
@@ -46,8 +48,21 @@ export default class MainPage extends React.Component {
                     </section>
                     <section id="research" className="blue-background">
                         <h1>Research Interests</h1>
-                        <h3>My publications are available at <Link style={{color: "white"}} to="/publications">ryedida.me/publications</Link>. Click a card to expand/collapse.</h3>
-                        <CardGrid cards={researchInterests} />
+                        <CardGrid active cards={researchInterests} />
+                    </section>
+                    <section id="pubs" className="white-background">
+                        <h1>Recent Publications</h1>
+                        {publications.map((data, i) => (
+                            <Publication
+                                key={i}
+                                title={data.title}
+                                publication={data.publication}
+                                year={data.year}
+                                authors={data.authors}
+                                link={data.link}
+                                code={data.code}
+                            />
+                        ))}
                     </section>
                     <section id="projects" className="red-background">
                         <h1>Projects</h1>

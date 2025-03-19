@@ -1,0 +1,152 @@
+$grey: rgb(51 51 51);
+$red: rgb(204 0 0);
+$blue: #293352;
+$green: rgb(52 168 83);
+$lightgreen: #C3D7A4;
+$lightgrey: rgb(242 242 242);
+$medgrey: rgb(220 220 220);
+
+// Section background
+$blue-background: #4156a1;
+$darkgrey-background: #24292e;
+
+// Dark mode colors
+$green-dark: rgb(2 118 33);
+$background-dark: rgb(13 17 23);
+$font-color-dark: $medgrey;
+$font-family: 'IBM Plex Sans', sans-serif;
+$line-height: 28px;
+$font-weight: 300;
+$margin: 50px;
+$code-background: rgb(21 31 35 / 20%);
+$font-color: rgb(65 65 65);
+
+* {
+  font-family: $font-family;
+
+  @media (prefers-color-scheme: light) {
+    color: $font-color;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    color: $font-color-dark;
+  }
+
+  font-weight: $font-weight;
+  line-height: $line-height;
+}
+
+body {
+  margin: 0;
+
+  @media (prefers-color-scheme: light) {
+    background-color: white;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    background-color: $background-dark;
+  }
+}
+
+div {
+  color: $font-color;
+}
+
+code {    // Inspired by GitHub
+  background-color: $code-background;
+  border-radius: 3px;
+  padding: .2em .4em;
+}
+
+i {
+  font-size: 16px;
+  margin-right: 10px;
+
+  @media (prefers-color-scheme: dark) {
+    color: black;
+  }
+}
+
+a {
+  color: $font-color;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  &#scroll-button {
+    position: fixed;
+    opacity: 0;
+    bottom: 10px;
+    right: 10px;
+    width: 50px;
+    height: 50px;
+    z-index: 1000;
+    border-radius: 50%;
+    outline: none;
+    background-color: $red;
+    cursor: default;
+    transition: background-color 250ms ease-out, opacity 250ms ease-out;
+
+    &.visible {
+      opacity: 1;
+      cursor: pointer;
+    }
+
+    i {
+      padding-left: 33%;
+      padding-top: 33%;
+    }
+
+    &:hover {
+      background-color: $blue;
+    }
+  }
+}
+
+ol {
+  b {
+    color: unset;
+  }
+}
+
+b {
+  font-weight: bold;
+
+  @media (prefers-color-scheme: light) {
+    color: $font-color;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    color: black;
+  }
+}
+
+#skills-section {
+  @media screen and (width <= 767px) {
+    display: none;
+  }
+}
+
+.chip {
+  color: white;
+  background-color: green;
+  padding: 5px;
+  border-radius: 25px;
+  margin-left: 10px;
+  text-transform: uppercase;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 0.9rem;
+
+  &.chip-red {
+    background-color: $red;
+  }
+
+  &.chip-blue {
+    background-color: lightblue;
+  }
+}
+
+@import "nav";
+@import "main";
+@import "grid";

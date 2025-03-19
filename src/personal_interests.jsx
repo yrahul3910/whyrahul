@@ -23,16 +23,6 @@ export default [{
         </p>
     </>
 }, {
-    title: "Smart Home",
-    info: <>
-        <img style={{ width: "80%", height: "auto" }} loading="lazy" src="/smart_home.jpeg" />
-        <p>
-            As fragmented as the smart home market can be, I am slowly getting deeper into it in the HomeKit ecosystem.
-            My current favorite use of the smart home is to remotely turn on my espresso machine using the SwitchBot Bot
-            to let it heat up before use.
-        </p>
-    </>
-}, {
     title: "Digital Privacy",
     info: <>
         <p>

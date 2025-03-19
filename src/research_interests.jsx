@@ -6,18 +6,13 @@ export default [
         info: (
             <div>
                 <p>
-                    I work at the intersection of artificial intelligence and software engineering. My most
-                    recent work develops a novel SOTA hyper-parameter optimization method that requires 25% of
-                    the runtime.
+                    I work at the intersection of artificial intelligence and software engineering. My
+                    work includes a novel SOTA hyper-parameter optimization method that requires 25% of
+                    the runtime and a novel oversampling method that improves defect prediction by up to
+                    123%. My dissertation focused on better, faster deep learning for SE by using feedforward
+                    networks over static code features with theoretically-driven novel methods that outperform
+                    the prior state-of-the-art at a fraction of the cost.
                 </p>
-                <p><b>Sample papers:</b></p>
-                <ul>
-                    <li><a href="https://arxiv.org/pdf/2401.09622.pdf">Sample-efficient hyper-parameter optimization</a></li>
-                    <li>Automatically suggesting microservice architectures for monoliths: <a href="https://www.sciencedirect.com/science/article/pii/S0957417423001744">Paper</a></li>
-                    <li>SOTA in defect prediction: <a href="https://arxiv.org/abs/2008.03835">Paper</a> | <a href="https://ryedida.cc/ghost">Code</a></li>
-                    <li><a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=10012496">Predicting false alarms in FindBugs</a></li>
-                </ul>
-                <br/>
             </div>
         )
     },
@@ -25,13 +20,14 @@ export default [
         title: "Theory-Driven Deep Learning",
         info: (
             <div>
-                <p>I work on theoretical and applied deep learning, especially with loss functions.</p>
-                <p><b>Sample papers:</b></p>
-                <ul>
-                    <li><a href="https://arxiv.org/abs/2402.05025">Efficient HPO using strong convexity</a></li>
-                    <li><a href="https://arxiv.org/abs/1902.07399">Adaptive learning rates for deep learning</a></li>
-                    <li><a href="https://arxiv.org/abs/1906.01975">Novel activation function</a></li>
-                </ul>
+                <p>
+                    I work on theoretical and applied deep learning, especially with loss functions.
+                    A lot of my applied deep learning work involves using recent results from the
+                    theoretical literature, bridging the gap between the two. Examples of this can
+                    be seen in my work on automated microservice partitioning and hyper-parameter
+                    optimization. Many of my core insights come from optimizing for better properties
+                    of the loss.
+                </p>
             </div>
         )
     }

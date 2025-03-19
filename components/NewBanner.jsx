@@ -18,33 +18,34 @@ export default class NewBanner extends React.Component {
                     <div id="banner-profile" className="profile-details">
                         <h3>About</h3>
                         <p>
-                            I earned my Ph.D. in Computer Science from NC State University, and my dissertation focused on theory-driven deep learning applied to SE.
+                            I am a Senior Data Scientist at LexisNexis, working on <a href="https://www.lexisnexis.com/en-us/products/protege.page">Protege</a>. I earned my Ph.D. in Computer Science from NC State University, and my dissertation focused on theory-driven deep learning applied to SE.
                             In my free time, I geek out on coffee and listen to Taylor Swift.
                         </p>
                         <ul>
-                            <li>
-                                <a style={{textDecoration: "none"}} href="mailto:hello@ryedida.me">
+                            <a style={{ textDecoration: "none" }} href="mailto:hello@ryedida.me">
+                                <li>
                                     E-mail
-                                </a>
                                 <i className="fas fa-arrow-right"></i>
-                            </li>
-                            <li>
-                                <a style={{textDecoration: "none"}} href="https://scholar.google.com/citations?user=0lP2AvkAAAAJ&hl=en">
+                                </li>
+                            </a>
+                            <a style={{ textDecoration: "none" }} href="https://scholar.google.com/citations?user=0lP2AvkAAAAJ&hl=en">
+                                <li>
                                     Google Scholar
-                                </a>
-                                <i className="fas fa-arrow-right"></i></li>
-                            <li>
-                                <a style={{textDecoration: "none"}} href="https://github.com/yrahul3910">
+                                <i className="fas fa-arrow-right"></i>
+                                </li>
+                            </a>
+                            <a style={{ textDecoration: "none" }} href="https://github.com/yrahul3910">
+                                <li>
                                     GitHub
-                                </a>
                                 <i className="fas fa-arrow-right"></i>
-                            </li>
-                            <li>
-                                <a style={{textDecoration: "none"}} href="https://www.linkedin.com/in/rahul-yedida/">
+                                </li>
+                            </a>
+                            <a style={{ textDecoration: "none" }} href="https://www.linkedin.com/in/rahul-yedida/">
+                                <li>
                                     LinkedIn
-                                </a>
                                 <i className="fas fa-arrow-right"></i>
-                            </li>
+                                </li>
+                            </a>
                         </ul>
                     </div>
                 </div>

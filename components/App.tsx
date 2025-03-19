@@ -1,7 +1,7 @@
 import React from "react";
-import { Switch, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 
-import MainPage from "./MainPage.jsx";
+import MainPage from "./MainPage";
 import NotFound from "./NotFound.jsx";
 import Birthday26 from "./Birthday26.jsx";
 import SendToFuture from "./sendtofuture/Main.jsx";
@@ -9,8 +9,8 @@ import Privacy from "./sendtofuture/Privacy.jsx";
 
 const App: React.FC = () => {
     return (
-        <Switch>
-            <Route exact path="/" render={() => <MainPage />} />
+        <Routes>
+            <Route exact path="/" element={<MainPage />} />
             <Route exact path="/sendtofuture" component={SendToFuture} />
             <Route exact path="/sendtofuture/privacy" component={Privacy} />
             <Route
@@ -33,7 +33,7 @@ const App: React.FC = () => {
             />
             <Route exact path="/1989rv" component={Birthday26} />
             <Route path="/*" render={() => <NotFound />} />
-        </Switch>
+        </Routes>
     );
 };
 

@@ -7,7 +7,7 @@ module.exports = {
     },
     mode: "development",
     //devtool: "inline-source-map",
-    entry: ["babel-polyfill", path.resolve(__dirname, "src/index")],
+    entry: [path.resolve(__dirname, "src/index.tsx")],
     output: {
         path: path.resolve(__dirname, "dist"),
         publicPath: "/",
@@ -19,10 +19,16 @@ module.exports = {
             inject: true,
         }),
     ],
+    resolve: {
+        extensions: [".js", ".tsx", ".jsx"],
+    },
     module: {
         rules: [
-            { test: /\.[jt]sx$/, exclude: /node_modules/, use: "babel-loader" },
-            { test: /\.js$/, exclude: /node_modules/, use: "babel-loader" },
+            {
+                test: /\.[jt]sx?$/,
+                exclude: /node_modules/,
+                use: "babel-loader",
+            },
             {
                 test: /\.css$/,
                 use: [

@@ -7,7 +7,7 @@ module.exports = {
     },
     mode: "production",
     //devtool: "inline-source-map",
-    entry: ["babel-polyfill", path.resolve(__dirname, "src/index")],
+    entry: ["babel-polyfill", path.resolve(__dirname, "src/index.tsx")],
     output: {
         path: path.resolve(__dirname, "dist"),
         publicPath: "/",

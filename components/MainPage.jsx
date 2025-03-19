@@ -41,10 +41,11 @@ export default class MainPage extends React.Component {
                 <main>
                     <section id="resume" className="red-background">
                         <h1>Resume / CV</h1>
-                        <h3 style={{color: "white"}}>
-                            Looking to hire? I am qualified for the roles below. Click a card to expand/collapse.
+                        <h3 style={{ color: "white" }}>
+                            I am qualified for the roles below. Note that each CV lists different sections
+                            and projects, based on the role. If you prefer, you can also download my <a style={{ color: "white" }} href="https://github.com/yrahul3910/resume/blob/master/pdf/master.pdf">master CV</a>.
                         </h3>
-                        <CardGrid cards={resumeCards} />
+                        <CardGrid active cards={resumeCards} />
                     </section>
                     <section id="research" className="blue-background">
                         <h1>Research Interests</h1>

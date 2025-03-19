@@ -18,7 +18,7 @@ export default class NewBanner extends React.Component {
                     <div id="banner-profile" className="profile-details">
                         <h3>About</h3>
                         <p>
-                            I am a Senior Data Scientist at LexisNexis, working on <a href="https://www.lexisnexis.com/en-us/products/protege.page">Protege</a>. I earned my Ph.D. in Computer Science from NC State University, and my dissertation focused on theory-driven deep learning applied to SE.
+                            I am a Senior Data Scientist at LexisNexis, working on <a href="https://www.lexisnexis.com/en-us/products/protege.page">Protégé</a>. I earned my Ph.D. in Computer Science from NC State University, and my dissertation focused on theory-driven deep learning applied to SE.
                             In my free time, I geek out on coffee and listen to Taylor Swift.
                         </p>
                         <ul>

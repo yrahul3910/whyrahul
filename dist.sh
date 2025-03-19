@@ -1,2 +1,2 @@
 #!/bin/sh
-npm run deploy
+bun run deploy

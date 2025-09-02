@@ -17,17 +17,16 @@ export default [{
         <p>
             I&apos;ve been a big fan of Taylor Swift since 2018! My favorite era is the Lover era, although I currently have
             evermore on repeat. My current favorite songs (in no particular order) are <i>Hits Different,</i>
-            <i>Cruel Summer (Live),</i> <i>Nothing New (Taylor&apos; Version) (From The Vault),</i>
-            <i>I Can See You (Taylor&apos; Version) (From The Vault),</i> <i>You&apos;re On Your Own, Kid,</i>
-            and <i>gold rush,</i> although this list frequently changes. Yes, I&apos;m excited for TTPD!
+            <i>Cruel Summer (Live),</i> <i>Nothing New (Taylor&apos;s Version) (From The Vault),</i>
+            <i>I Can See You (Taylor&apos;s Version) (From The Vault),</i> <i>You&apos;re On Your Own, Kid,</i>
+            and <i>I Can Do It With a Broken Heart,</i> although this list frequently changes. Yes, I&apos;m excited for TLOAS!
         </p>
     </>
 }, {
-    title: "Digital Privacy",
+    title: "Digital Privacy and Open-Source",
     info: <>
         <p>
-            I am a big advocate for digital privacy and annually donate to organizations that actively fight for users&apos;
-            rights online.
+            I am a big advocate for digital privacy and open-source software, and annually donate to organizations that actively fight for users&apos; rights online and popular open-source projects I use and believe in. This list has historically included the Electronic Frontier Foundation, Mozilla Foundation, Software in the Public Interest, core-js, and neovim.
         </p>
     </>
 }];

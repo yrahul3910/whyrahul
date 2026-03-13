@@ -11,10 +11,10 @@ interface PublicationProps {
 
 const Publication: React.FC<PublicationProps> = (props: PublicationProps) => {
     return (
-        <div>
-            <b>{props.title}</b>
-            <p>{props.authors}</p>
-            <p>
+        <div className="publication">
+            <h4 className="title">{props.title}</h4>
+            <p className="authors">{props.authors}</p>
+            <p className="venue">
                 <em>{props.publication}</em>, {props.year}
             </p>
             <div className="links">

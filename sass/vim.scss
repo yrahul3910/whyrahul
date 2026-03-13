@@ -1,0 +1,139 @@
+.vim-hints-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+.vim-hint {
+  position: absolute;
+  padding: 1px 3px;
+  background-color: rgba($accent, 0.9);
+  color: #000;
+  font-family: $font-mono;
+  font-size: 11px;
+  font-weight: bold;
+  border-radius: 2px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+  z-index: 10000;
+  text-transform: lowercase;
+  border: 1px solid rgba(255,255,255,0.2);
+
+  &.inactive {
+    opacity: 0.4;
+    background-color: rgba($border, 0.8);
+    color: $fg-dim;
+  }
+
+  .match {
+    color: #fff;
+    text-decoration: underline;
+  }
+}
+
+.vim-status-hint {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    font-family: $font-mono;
+    font-size: 0.7rem;
+    color: $fg-dim;
+    opacity: 0.6;
+    pointer-events: none;
+    z-index: 500;
+}
+
+// Visual indicator for Vim mode
+.vim-mode-indicator {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background: $accent-green;
+    color: white;
+    padding: 4px 10px;
+    font-family: $font-mono;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 4px;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.vim-help-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.85);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 11000;
+    backdrop-filter: blur(4px);
+}
+
+.vim-help-dialog {
+    background: $card-bg;
+    border: 1px solid $border;
+    padding: 30px;
+    border-radius: 12px;
+    max-width: 450px;
+    width: 90%;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.6);
+
+    h2 {
+        margin-top: 0;
+        color: $accent-green;
+        font-family: $font-mono;
+        border-bottom: 1px solid $border;
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+        font-size: 1.4rem;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 12px;
+            font-family: $font-mono;
+            font-size: 0.9rem;
+            color: $fg;
+
+            span {
+                display: inline-block;
+                width: 35px;
+                height: 22px;
+                line-height: 22px;
+                background: $border;
+                color: $accent;
+                text-align: center;
+                border-radius: 4px;
+                margin-right: 15px;
+                font-weight: bold;
+                font-size: 0.8rem;
+                border: 1px solid rgba(255,255,255,0.05);
+            }
+        }
+    }
+
+    .footer {
+        margin-top: 25px;
+        text-align: center;
+        color: $fg-dim;
+        font-size: 0.75rem;
+        font-style: italic;
+        opacity: 0.7;
+    }
+}

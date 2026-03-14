@@ -45,24 +45,6 @@
     z-index: 500;
 }
 
-// Visual indicator for Vim mode
-.vim-mode-indicator {
-    position: fixed;
-    bottom: 20px;
-    left: 20px;
-    background: $accent-green;
-    color: white;
-    padding: 4px 10px;
-    font-family: $font-mono;
-    font-size: 12px;
-    font-weight: bold;
-    border-radius: 4px;
-    z-index: 1000;
-    box-shadow: 0 2px 8px rgb(0 0 0 / 50%);
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-}
-
 .vim-help-overlay {
     position: fixed;
     top: 0;

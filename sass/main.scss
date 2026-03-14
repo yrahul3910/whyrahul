@@ -28,11 +28,13 @@ main {
         color: inherit;
     }
 
-    &.red-background, &.blue-background, &.white-background, &.darkgray-background, &.grey-background {
+    &.red-background, &.blue-background, &.white-background, &.darkgray-background {
       background-color: transparent !important;
+
       h1, h3, p, a, li, span, em {
         color: $fg !important;
       }
+
       h1 {
         color: $accent-green !important;
       }
@@ -152,35 +154,3 @@ main {
   }
 }
 
-// Nav improvements
-.sticky-nav {
-    background-color: rgba($bg, 0.9);
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid $border;
-    padding: 10px 0;
-
-    ul {
-        display: flex;
-        justify-content: center;
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        gap: 20px;
-
-        li a {
-            font-family: $font-mono;
-            font-size: 0.85rem;
-            color: $fg-dim;
-            text-transform: lowercase;
-
-            &:hover, &.active {
-                color: $accent;
-            }
-
-            &::before {
-                content: "~/";
-                opacity: 0.5;
-            }
-        }
-    }
-}

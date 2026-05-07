@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import NewBanner from "./NewBanner.jsx";
 import Publication from "./Publication";
 import StickyNav from "./StickyNav.jsx";
 import CardGrid from "./CardGrid";
+import ScrollToTop from "./ScrollToTop.jsx";
 
 import researchInterests from "../src/research_interests.jsx";
 import contacts from "../src/contacts.jsx";
@@ -13,16 +14,37 @@ import personalInterests from "../src/personal_interests.jsx";
 import publications from "../src/publications.jsx";
 
 const MainPage: React.FC = () => {
+    useEffect(() => {
+        const handleScroll = () => {
+            const el = document.getElementById("scroll-button");
+            if (
+                document.body.scrollTop > 100 ||
+                document.documentElement.scrollTop > 100
+            ) {
+                el.classList.add("visible");
+            } else {
+                el.classList.remove("visible");
+            }
+        };
+
+        window.addEventListener("scroll", handleScroll);
+
+        // Cleanup function to remove the event listener
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
+    }, []);
 
     return (
         <div>
+            <ScrollToTop />
             <h1 className="name">Rahul Yedida</h1>
             <NewBanner />
             <StickyNav />
             <main>
                 <section id="resume" className="red-background">
                     <h1>Resume / CV</h1>
-                    <h3 style={{ color: "white", fontWeight: 400 }}>
+                    <h3 style={{ color: "white" }}>
                         I am qualified for the roles below. Note that each CV
                         lists different sections and projects, based on the
                         role. If you prefer, you can also download my{" "}

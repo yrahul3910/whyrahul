@@ -4,14 +4,6 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 module.exports = {
     devServer: {
         historyApiFallback: true,
-        static: [
-            {
-                directory: path.join(__dirname, "assets"),
-            },
-            {
-                directory: path.join(__dirname, "src"),
-            },
-        ],
     },
     mode: "development",
     //devtool: "inline-source-map",

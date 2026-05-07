@@ -1,22 +1,19 @@
 // Colors - Hacker/Tech Theme
-$bg: #0f1011;
-$bg-darker: #0a0c10cc;
+$bg: #0a0c10;
 $fg: #c9d1d9;
 $fg-dim: #8b949e;
 $accent: #58a6ff;
 $accent-green: #3fb950;
+$accent-red: #f85149;
 $border: #30363d;
 $card-bg: #161b22;
+
 $font-mono: 'Fira Code', 'IBM Plex Mono', monospace;
 $font-sans: 'IBM Plex Sans', sans-serif;
 $font-name: 'Playfair Display', serif;
+
 $line-height: 1.6;
 $margin: 40px;
-
-@import "nav";
-@import "main";
-@import "grid";
-@import "vim";
 
 * {
   box-sizing: border-box;
@@ -39,13 +36,10 @@ h1, h2, h3, h4, h5, h6 {
 
 h1.name {
     font-family: $font-name !important;
-    background-color: $bg-darker;
     color: $fg;
     font-weight: 400;
     font-size: 4rem;
-  width: 100vw;
-  padding: 4rem 25vw 3rem 25vw;
-  margin: 0;
+    margin: 5vh 0 4vh;
     text-align: center;
     letter-spacing: -0.05em;
 }
@@ -85,4 +79,17 @@ code {
   font-family: $font-mono;
   font-size: 0.75rem;
   font-weight: 700;
+
+  &.chip-red {
+    background-color: $accent-red;
+  }
+
+  &.chip-blue {
+    background-color: $accent;
+  }
 }
+
+@import "nav";
+@import "main";
+@import "grid";
+@import "vim";

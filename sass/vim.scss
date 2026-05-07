@@ -16,10 +16,10 @@
   font-size: 11px;
   font-weight: bold;
   border-radius: 2px;
-  box-shadow: 0 1px 3px rgb(0 0 0 / 30%);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.3);
   z-index: 10000;
   text-transform: lowercase;
-  border: 1px solid rgb(255 255 255 / 20%);
+  border: 1px solid rgba(255,255,255,0.2);
 
   &.inactive {
     opacity: 0.4;
@@ -58,7 +58,7 @@
     font-weight: bold;
     border-radius: 4px;
     z-index: 1000;
-    box-shadow: 0 2px 8px rgb(0 0 0 / 50%);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.5);
     text-transform: uppercase;
     letter-spacing: 0.05em;
 }
@@ -69,7 +69,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgb(0 0 0 / 85%);
+    background: rgba(0,0,0,0.85);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -84,7 +84,7 @@
     border-radius: 12px;
     max-width: 450px;
     width: 90%;
-    box-shadow: 0 10px 40px rgb(0 0 0 / 60%);
+    box-shadow: 0 10px 40px rgba(0,0,0,0.6);
 
     h2 {
         margin-top: 0;
@@ -123,7 +123,7 @@
                 margin-right: 15px;
                 font-weight: bold;
                 font-size: 0.8rem;
-                border: 1px solid rgb(255 255 255 / 5%);
+                border: 1px solid rgba(255,255,255,0.05);
             }
         }
     }

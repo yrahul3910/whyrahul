@@ -175,6 +175,7 @@ const VimController: React.FC = () => {
 
             {hintMode && (
                 <div className="vim-hints-container">
+                    <div className="vim-mode-indicator">HINT MODE</div>
                     {hints.map((h, i) => (
                         <div
                             key={i}

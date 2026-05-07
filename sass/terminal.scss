@@ -1,9 +1,5 @@
-// Terminal direction A — full theme.
-// Replace sass/main.scss + sass/nav.scss + sass/grid.scss with a single import of this.
-
 @use 'sass:color';
 
-// Palette — dark default; light via prefers-color-scheme + manual toggle on <html data-theme="light">.
 $dark-bg: #0b0d0c;
 $dark-fg: #e8e6df;
 $dark-muted: #8a8a82;
@@ -72,7 +68,7 @@ a { color: inherit; text-decoration: none; }
 h1.name {
   font-family: $serif;
   font-weight: 400;
-  font-size: clamp(56px, 9vw, 128px);
+  font-size: clamp(45px, 9vw, 100px);
   line-height: 0.95;
   letter-spacing: -0.025em;
   margin: 0;

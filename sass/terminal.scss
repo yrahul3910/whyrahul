@@ -1,0 +1,506 @@
+// Terminal direction A — full theme.
+// Replace sass/main.scss + sass/nav.scss + sass/grid.scss with a single import of this.
+
+@use 'sass:color';
+
+// Palette — dark default; light via prefers-color-scheme + manual toggle on <html data-theme="light">.
+$dark-bg: #0b0d0c;
+$dark-fg: #e8e6df;
+$dark-muted: #8a8a82;
+$dark-rule: #1f211f;
+$dark-panel: #0f1110;
+$dark-accent: #d97843;
+$dark-green: #7fb069;
+
+$light-bg: #f5f3ec;
+$light-fg: #1a1a17;
+$light-muted: #6b6b62;
+$light-rule: #d8d5cb;
+$light-panel: #ebe8df;
+$light-accent: #b85c2c;
+$light-green: #5a8a3f;
+
+$mono: 'JetBrains Mono', ui-monospace, 'SF Mono', monospace;
+$serif: 'Playfair Display', Georgia, serif;
+$sans: 'IBM Plex Sans', sans-serif;
+
+:root {
+  --bg: #{$dark-bg};
+  --fg: #{$dark-fg};
+  --muted: #{$dark-muted};
+  --rule: #{$dark-rule};
+  --panel: #{$dark-panel};
+  --accent: #{$dark-accent};
+  --green: #{$dark-green};
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg: #{$light-bg};
+    --fg: #{$light-fg};
+    --muted: #{$light-muted};
+    --rule: #{$light-rule};
+    --panel: #{$light-panel};
+    --accent: #{$light-accent};
+    --green: #{$light-green};
+  }
+}
+
+[data-theme="dark"] {
+  --bg: #{$dark-bg}; --fg: #{$dark-fg}; --muted: #{$dark-muted};
+  --rule: #{$dark-rule}; --panel: #{$dark-panel}; --accent: #{$dark-accent}; --green: #{$dark-green};
+}
+[data-theme="light"] {
+  --bg: #{$light-bg}; --fg: #{$light-fg}; --muted: #{$light-muted};
+  --rule: #{$light-rule}; --panel: #{$light-panel}; --accent: #{$light-accent}; --green: #{$light-green};
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: $mono;
+  font-size: 14px;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: inherit; text-decoration: none; }
+
+h1.name {
+  font-family: $serif;
+  font-weight: 400;
+  font-size: clamp(56px, 9vw, 128px);
+  line-height: 0.95;
+  letter-spacing: -0.025em;
+  margin: 0;
+}
+
+.term {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 32px 64px;
+
+  @media (width <= 720px) { padding: 0 18px 48px; }
+}
+
+// ── Sticky nav ─────────────────────────────────────────────
+.term-nav {
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 14px 0;
+  margin-bottom: 16px;
+  background: color-mix(in srgb, var(--bg) 88%, transparent);
+  backdrop-filter: saturate(180%) blur(10px);
+  border-bottom: 1px solid var(--rule);
+  font-family: $mono;
+  font-size: 12px;
+
+  &__brand { display: flex; gap: 8px; align-items: center; }
+  &__prompt { color: var(--green); }
+  &__cursor { color: var(--muted); }
+
+  &__list {
+    list-style: none;
+    margin: 0; padding: 0;
+    flex: 1;
+    display: flex;
+    gap: 18px;
+
+    li a {
+      transition: color .15s ease;
+      &:hover { color: var(--accent); }
+    }
+  }
+
+  &__status {
+    display: flex; align-items: center; gap: 6px;
+    color: var(--muted); font-size: 11px;
+  }
+
+  &__dot {
+    width: 6px; height: 6px; border-radius: 50%;
+    background: var(--green);
+    box-shadow: 0 0 6px color-mix(in srgb, var(--green) 60%, transparent);
+  }
+
+  &__hamburger {
+    display: none;
+    background: transparent; border: 1px solid var(--rule);
+    color: var(--fg); padding: 4px 8px; cursor: pointer;
+  }
+
+  @media (width <= 720px) {
+    flex-wrap: wrap;
+    &__hamburger { display: inline-block; margin-left: auto; }
+    &__list {
+      flex-basis: 100%;
+      flex-direction: column;
+      gap: 8px;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height .25s ease;
+    }
+    &.expanded &__list { max-height: 320px; padding-top: 12px; }
+    &__status { display: none; }
+  }
+}
+
+// ── Hero ───────────────────────────────────────────────────
+.hero {
+  padding: 48px 0 32px;
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 48px;
+    align-items: start;
+
+    @media (width <= 900px) { grid-template-columns: 1fr; }
+  }
+
+  &__boot {
+    font-family: $mono;
+    font-size: 13px;
+    color: var(--muted);
+    line-height: 1.8;
+    min-height: 240px;
+  }
+  &__line { white-space: pre-wrap; }
+  &__line-prompt { color: var(--green); }
+  &__line--cmd { color: var(--fg); }
+  &__line--ok { color: var(--green); }
+  &__line--info { color: var(--muted); }
+
+  &__caret {
+    display: inline-block;
+    width: 8px; height: 14px;
+    background: var(--fg);
+    vertical-align: middle;
+    animation: blink 1s steps(2) infinite;
+  }
+
+  &__cmd {
+    font-family: $mono; font-size: 12px;
+    color: var(--muted); margin-bottom: 12px;
+  }
+
+  &__kv {
+    list-style: none; margin: 22px 0 0; padding: 0;
+    font-family: $mono; font-size: 13px;
+    line-height: 1.85;
+    max-width: 520px;
+
+    li {
+      display: grid;
+      grid-template-columns: 80px 1fr;
+      gap: 16px;
+      span:first-child { color: var(--accent); }
+      span:last-child { color: var(--fg); }
+    }
+  }
+
+  &__bio {
+    font-family: $mono;
+    font-size: 14px;
+    line-height: 1.8;
+    color: var(--fg);
+    max-width: 580px;
+    margin-top: 28px;
+
+    &--muted { color: var(--muted); margin-top: 14px; font-size: 13px; }
+  }
+
+  &__comment { color: var(--accent); }
+
+  &__right { display: flex; flex-direction: column; gap: 16px; }
+
+  &__portrait {
+    margin: 0;
+    border: 1px solid var(--rule);
+    background: var(--panel);
+    aspect-ratio: 3/4;
+    overflow: hidden;
+    position: relative;
+
+    img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+    figcaption {
+      position: absolute;
+      inset: auto 0 0 0;
+      padding: 8px 10px;
+      font-family: $mono; font-size: 10px;
+      color: var(--muted);
+      background: linear-gradient(transparent, var(--bg));
+      display: flex; justify-content: space-between;
+    }
+  }
+}
+
+@keyframes blink { 50% { opacity: 0; } }
+
+// ── Floating live modules (right rail desktop, stacked mobile) ─
+.floating-modules {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 240px;
+
+  @media (width <= 1100px) { display: none; }
+}
+
+.live-module {
+  border: 1px solid var(--rule);
+  background: color-mix(in srgb, var(--panel) 92%, transparent);
+  backdrop-filter: blur(8px);
+  padding: 12px 14px;
+  font-family: $mono; font-size: 12px;
+  color: var(--muted);
+
+  &__head {
+    display: flex; justify-content: space-between;
+    margin-bottom: 6px;
+    i { margin-right: 6px; }
+  }
+  &__live { color: var(--accent); display: flex; align-items: center; gap: 4px; font-size: 10px; letter-spacing: 0.1em; }
+  &__dot { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); animation: blink 1.4s ease-in-out infinite; }
+  &__meta { color: var(--accent); font-size: 11px; }
+  &__title { color: var(--fg); font-size: 13px; margin-bottom: 2px; }
+  &__sub { margin-bottom: 8px; }
+
+  &__bar {
+    height: 2px; background: var(--rule); position: relative; margin-bottom: 4px;
+    &-fill { position: absolute; inset: 0; width: 0; background: var(--accent); transition: width .8s linear; }
+  }
+  &__times { display: flex; justify-content: space-between; font-size: 11px; }
+
+  &__cups {
+    display: flex; align-items: center; gap: 10px;
+    button {
+      background: transparent; border: 1px solid var(--rule);
+      color: var(--fg); font-family: $mono; font-size: 11px;
+      padding: 2px 8px; cursor: pointer;
+      &:hover { border-color: var(--accent); }
+    }
+  }
+  &__plus { margin-left: 6px; color: var(--accent); }
+}
+
+// ── Sections ───────────────────────────────────────────────
+.term-section {
+  padding: 64px 0 24px;
+  border-top: 1px solid var(--rule);
+
+  &__head {
+    display: flex; align-items: center; gap: 10px;
+    font-family: $mono; font-size: 11px;
+    color: var(--muted);
+    letter-spacing: 0.12em; text-transform: uppercase;
+    margin-bottom: 28px;
+  }
+  &__prompt { color: var(--green); }
+  &__rule { flex: 1; height: 1px; background: var(--rule); margin-left: 8px; }
+
+  h2 {
+    font-family: $serif;
+    font-weight: 400;
+    font-size: 44px;
+    margin: 0 0 28px;
+    letter-spacing: -0.015em;
+    color: var(--fg);
+  }
+}
+
+// ── Resume ────────────────────────────────────────────────
+.resume-list { display: flex; flex-direction: column; gap: 4px; }
+.resume-row {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 24px;
+  padding: 18px 0;
+  border-top: 1px solid var(--rule);
+  font-size: 14px;
+
+  @media (width <= 720px) { grid-template-columns: 1fr; gap: 6px; }
+
+  &__years { color: var(--muted); font-size: 12px; padding-top: 4px; }
+  &__role { font-family: $serif; font-size: 22px; color: var(--fg); }
+  &__org { font-family: $mono; font-size: 12px; color: var(--accent); margin-top: 4px; }
+  &__body { color: var(--muted); margin-top: 6px; line-height: 1.7; }
+}
+
+.resume-downloads {
+  margin-top: 32px;
+  padding: 20px;
+  border: 1px solid var(--rule);
+  background: var(--panel);
+  display: flex; flex-wrap: wrap; gap: 12px 24px;
+
+  &__head {
+    flex-basis: 100%;
+    color: var(--accent);
+    font-family: $mono; font-size: 11px;
+    letter-spacing: 0.1em; text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  &__link {
+    color: var(--fg);
+    font-family: $mono; font-size: 13px;
+    border-bottom: 1px dashed var(--rule);
+    padding-bottom: 2px;
+    span { color: var(--muted); margin-left: 4px; }
+    &:hover { border-color: var(--accent); color: var(--accent); span { color: var(--accent); } }
+  }
+}
+
+// ── Research ──────────────────────────────────────────────
+.research-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 20px;
+  @media (width <= 900px) { grid-template-columns: 1fr; }
+}
+.research-card {
+  border: 1px solid var(--rule);
+  background: var(--panel);
+  padding: 24px;
+  &__tag {
+    font-family: $mono; font-size: 11px; color: var(--accent);
+    letter-spacing: 0.08em; margin-bottom: 8px;
+  }
+  h3 { font-family: $serif; font-weight: 400; font-size: 22px; margin: 0 0 12px; color: var(--fg); }
+  p { margin: 0; font-size: 13px; line-height: 1.75; color: var(--muted); }
+}
+
+// ── Publications ──────────────────────────────────────────
+.pubs-table {
+  width: 100%; border-collapse: collapse; font-size: 13px;
+
+  td { padding: 16px 12px; vertical-align: top; border-bottom: 1px solid var(--rule); }
+  td:first-child { padding-left: 0; }
+  td:last-child { padding-right: 0; }
+
+  &__year { color: var(--muted); width: 60px; font-family: $mono; }
+  &__venue { color: var(--accent); width: 220px; font-family: $serif; em { font-style: italic; } }
+  &__title {
+    color: var(--fg);
+    > span { display: block; }
+    span:first-child { font-family: $serif; font-size: 17px; line-height: 1.4; }
+  }
+  &__authors { color: var(--muted); font-size: 12px; margin-top: 4px; font-style: italic; }
+  &__links {
+    margin-top: 8px;
+    display: flex; gap: 12px;
+    a {
+      font-family: $mono; font-size: 11px; color: var(--accent);
+      border-bottom: 1px dashed var(--rule);
+      &:hover { border-color: var(--accent); }
+    }
+  }
+
+  @media (width <= 720px) {
+    &, tbody, tr, td { display: block; width: auto; }
+    tr { padding: 16px 0; border-bottom: 1px solid var(--rule); }
+    td { border: none; padding: 4px 0; }
+  }
+}
+
+// ── Projects ──────────────────────────────────────────────
+.projects-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 14px;
+  @media (width <= 720px) { grid-template-columns: 1fr; }
+}
+.project-card {
+  display: block;
+  border: 1px solid var(--rule);
+  background: var(--panel);
+  padding: 20px;
+  transition: border-color .15s ease;
+  &:hover { border-color: var(--accent); }
+
+  &__head {
+    display: flex; justify-content: space-between; align-items: baseline;
+    margin-bottom: 8px;
+  }
+  &__name { font-family: $serif; font-size: 22px; color: var(--fg); }
+  &__org { font-family: $mono; font-size: 11px; color: var(--muted); }
+
+  p { font-size: 13px; color: var(--muted); line-height: 1.75; margin: 0 0 14px; }
+
+  &__stack {
+    display: flex; gap: 6px; flex-wrap: wrap;
+    span {
+      font-family: $mono; font-size: 10px; padding: 2px 8px;
+      border: 1px solid var(--rule); color: var(--muted);
+    }
+  }
+}
+
+// ── Interests ─────────────────────────────────────────────
+.interests-grid {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px;
+  @media (width <= 1000px) { grid-template-columns: repeat(2, 1fr); }
+  @media (width <= 600px) { grid-template-columns: 1fr; }
+}
+.interest {
+  border-top: 1px solid var(--accent);
+  padding-top: 14px;
+  h3 { font-family: $serif; font-weight: 400; font-size: 22px; margin: 0 0 8px; color: var(--fg); }
+  p { margin: 0; color: var(--muted); font-size: 13px; line-height: 1.7; }
+}
+
+// ── Contact ───────────────────────────────────────────────
+.contact-list {
+  font-family: $mono; font-size: 14px; line-height: 1.95;
+
+  &__cmd { color: var(--muted); margin-bottom: 8px;
+    &::before { content: ""; }
+  }
+}
+.contact-row {
+  display: flex; gap: 10px; padding-left: 16px; align-items: baseline;
+  &__arrow { color: var(--accent); }
+  &__kind { color: var(--muted); white-space: pre; }
+  &__val { color: var(--fg); }
+  &__note { color: var(--green); font-size: 11px; margin-left: 8px; padding: 1px 8px; border: 1px solid var(--green); border-radius: 2px; text-transform: uppercase; letter-spacing: 0.1em; }
+  &:hover &__val { color: var(--accent); }
+}
+
+.exit {
+  margin-top: 36px;
+  font-family: $mono; font-size: 12px;
+  color: var(--muted);
+  border-top: 1px solid var(--rule);
+  padding-top: 14px;
+
+  &::before { color: var(--green); content: "$"; margin-right: 8px; }
+  &__caret {
+    display: inline-block; width: 7px; height: 12px;
+    background: var(--fg); margin-left: 6px; vertical-align: middle;
+    animation: blink 1s steps(2) infinite;
+  }
+}
+
+// ── Scroll-to-top ────────────────────────────────────────
+a#scroll-button {
+  position: fixed; bottom: 16px; right: 16px;
+  width: 40px; height: 40px;
+  background: var(--accent);
+  border: 1px solid var(--accent);
+  display: flex; align-items: center; justify-content: center;
+  opacity: 0; pointer-events: none;
+  transition: opacity .2s ease;
+  z-index: 25;
+  i { color: var(--bg); margin: 0; }
+  &.visible { opacity: 1; pointer-events: auto; cursor: pointer; }
+  &:hover { background: color-mix(in srgb, var(--accent) 80%, var(--bg)); }
+}

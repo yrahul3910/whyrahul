@@ -7,14 +7,14 @@ export default class ScrollToTop extends React.Component {
     }
 
     click() {
-        let el = document.getElementById("top");
-        el.scrollIntoView({block: "start", behavior: "smooth"});
+        let el = document.getElementById("hero");
+        el.scrollIntoView({ block: "start", behavior: "smooth" });
     }
 
     render() {
         return (
-            <a style={{cursor: "pointer"}} id="scroll-button" onClick={this.click}>
-                <i style={{color: "white"}} className="fas fa-arrow-up"></i>
+            <a style={{ cursor: "pointer" }} id="scroll-button" onClick={this.click}>
+                <i style={{ color: "white" }} className="fas fa-arrow-up"></i>
             </a>
         );
     }

@@ -1,108 +1,285 @@
+// MainPage — terminal-A direction.
+// Replaces the existing card-grid layout with a single dark dev-formal theme.
+
 import React, { useEffect } from "react";
-
-import NewBanner from "./NewBanner.jsx";
-import Publication from "./Publication";
 import StickyNav from "./StickyNav.jsx";
-import CardGrid from "./CardGrid";
 import ScrollToTop from "./ScrollToTop.jsx";
+import Hero from "./Hero.jsx";
+import NowPlaying from "./NowPlaying.jsx";
+import CoffeeNow from "./CoffeeNow.jsx";
 
-import researchInterests from "../src/research_interests.jsx";
-import contacts from "../src/contacts.jsx";
-import projects from "../src/projects.jsx";
-import resumeCards from "../src/resumeCards.jsx";
-import personalInterests from "../src/personal_interests.jsx";
 import publications from "../src/publications.jsx";
 
-const MainPage: React.FC = () => {
+const RESEARCH = [
+    {
+        slug: "ai-for-se",
+        title: "AI for SE",
+        body: "I work at the intersection of artificial intelligence and software engineering. My work includes a novel SOTA hyper-parameter optimization method that requires 25% of the runtime and a novel oversampling method that improves defect prediction by up to 123%. My dissertation focused on better, faster deep learning for SE by using feedforward networks over static code features with theoretically-driven novel methods that outperform the prior state-of-the-art at a fraction of the cost.",
+    },
+    {
+        slug: "theory-driven-dl",
+        title: "Theory-Driven Deep Learning",
+        body: "I work on theoretical and applied deep learning, especially with loss functions. A lot of my applied deep learning work involves using recent results from the theoretical literature, bridging the gap between the two. Examples of this can be seen in my work on automated microservice partitioning and hyper-parameter optimization. Many of my core insights come from optimizing for better properties of the loss.",
+    },
+];
+
+const PROJECTS = [
+    {
+        name: "Zotero RAG System",
+        org: "wip · rust",
+        blurb:
+            "RAG system for my Zotero library, with a custom academic-PDF parser that extracts text and equations.",
+        link: "https://github.com/yrahul3910/zotero-rag",
+        stack: ["Rust"],
+    },
+    {
+        name: "Programmable Resumes",
+        org: "open source",
+        blurb:
+            "A syntax for modular resumes that allows generating multiple targeted CVs in parallel.",
+        link: "https://github.com/yrahul3910/programmable-resumes/",
+        stack: ["TS"],
+    },
+    {
+        name: "raise-utils",
+        org: "lab tooling · 50k+ dl",
+        blurb:
+            "Centralized Python implementations of our lab's algorithms.",
+        link: "https://pypi.org/project/raise-utils/",
+        stack: ["Python"],
+    },
+    {
+        name: "pysh",
+        org: "language",
+        blurb:
+            "Superset of Python that allows inline shell command evaluation. Includes a transpiler and a VS Code extension.",
+        link: "https://github.com/yrahul3910/pysh",
+        stack: ["Python"],
+    },
+    {
+        name: "JournalBear",
+        org: "desktop",
+        blurb:
+            "Cross-platform journal app built with Electron, encrypted with AES-256.",
+        link: "https://github.com/yrahul3910/journal",
+        stack: ["Electron"],
+    },
+    {
+        name: "Activity Data Project",
+        org: "personal data",
+        blurb:
+            "Collected 10 months of activity data across 30 categories, then trained a 2-layer LSTM to predict the next activity from the previous five.",
+        link: "https://github.com/yrahul3910/atracker-analysis",
+        stack: ["Python"],
+    },
+];
+
+const RESUME = [
+    {
+        years: "2024 → present",
+        role: "Senior Data Scientist",
+        org: "LexisNexis · Protégé",
+        body: "Deep learning for legal document understanding at production scale.",
+    },
+    {
+        years: "2024",
+        role: "Ph.D., Computer Science",
+        org: "NC State University",
+        body: "Theory-driven deep learning applied to software engineering.",
+    },
+    {
+        years: "2020 — 2024",
+        role: "Research Assistant",
+        org: "RAISE Lab, NC State",
+        body: "Loss functions, hyper-parameter optimization, defect prediction.",
+    },
+];
+
+const RESUME_DOWNLOADS = [
+    { label: "Academic CV", href: "https://github.com/yrahul3910/resume/raw/master/pdf/academic.pdf" },
+    { label: "ML Engineer CV", href: "https://github.com/yrahul3910/resume/raw/master/pdf/ml.pdf" },
+    { label: "Software CV", href: "https://github.com/yrahul3910/resume/raw/master/pdf/sde.pdf" },
+    { label: "Master CV", href: "https://github.com/yrahul3910/resume/blob/master/pdf/master.pdf" },
+    { label: "Research statement", href: "https://github.com/yrahul3910/whyrahul/raw/master/assets/research_statement.pdf" },
+    { label: "Teaching statement", href: "https://github.com/yrahul3910/whyrahul/raw/master/assets/teaching_statement.pdf" },
+];
+
+const INTERESTS = [
+    {
+        label: "Coffee",
+        body:
+            "Pour overs on the Orea v3, espresso on the Breville Barista Express + Sette 270Wi. Best cup so far: a Panama Geisha from Black & White Coffee Roasters.",
+    },
+    {
+        label: "Taylor Swift",
+        body:
+            "Fan since 2018. Lover era forever, evermore on repeat. Yes, I'm excited for TLOAS.",
+    },
+    {
+        label: "Digital Privacy & OSS",
+        body:
+            "Annual donor to EFF, Mozilla, SPI, core-js, neovim, and other projects I rely on.",
+    },
+    {
+        label: "Reading",
+        body:
+            "Mostly philosophy of science right now.",
+    },
+];
+
+const CONTACTS = [
+    { kind: "email", label: "rahul@ryedida.me", href: "mailto:hello@ryedida.me", note: "preferred" },
+    { kind: "scholar", label: "scholar.google.com", href: "https://scholar.google.com/citations?user=0lP2AvkAAAAJ&hl=en" },
+    { kind: "github", label: "github.com/yrahul3910", href: "https://github.com/yrahul3910" },
+    { kind: "linkedin", label: "linkedin.com/in/rahul-yedida", href: "https://www.linkedin.com/in/rahul-yedida/" },
+    { kind: "twitter", label: "@rahulyedida13", href: "https://twitter.com/rahulyedida13" },
+];
+
+const MainPage = () => {
     useEffect(() => {
-        const handleScroll = () => {
+        const onScroll = () => {
             const el = document.getElementById("scroll-button");
-            if (
-                document.body.scrollTop > 100 ||
-                document.documentElement.scrollTop > 100
-            ) {
-                el.classList.add("visible");
-            } else {
-                el.classList.remove("visible");
-            }
+            if (!el) return;
+            if (window.scrollY > 200) el.classList.add("visible");
+            else el.classList.remove("visible");
         };
-
-        window.addEventListener("scroll", handleScroll);
-
-        // Cleanup function to remove the event listener
-        return () => {
-            window.removeEventListener("scroll", handleScroll);
-        };
+        window.addEventListener("scroll", onScroll);
+        return () => window.removeEventListener("scroll", onScroll);
     }, []);
 
     return (
-        <div>
+        <div className="term">
             <ScrollToTop />
-            <h1 className="name">Rahul Yedida</h1>
-            <NewBanner />
             <StickyNav />
+            <Hero />
+            <aside className="floating-modules">
+                <NowPlaying />
+                <CoffeeNow />
+            </aside>
+
             <main>
-                <section id="resume" className="red-background">
-                    <h1>Resume / CV</h1>
-                    <h3 style={{ color: "white" }}>
-                        I am qualified for the roles below. Note that each CV
-                        lists different sections and projects, based on the
-                        role. If you prefer, you can also download my{" "}
-                        <a
-                            style={{ color: "white" }}
-                            href="https://github.com/yrahul3910/resume/blob/master/pdf/master.pdf"
-                        >
-                            master CV
-                        </a>
-                        .
-                    </h3>
-                    <CardGrid active cards={resumeCards} />
-                </section>
-                <section id="research" className="blue-background">
-                    <h1>Research Interests</h1>
-                    <CardGrid active cards={researchInterests} />
-                </section>
-                <section id="pubs" className="white-background">
-                    <h1>Recent Publications</h1>
-                    {publications.map((data, i) => (
-                        <Publication
-                            key={i}
-                            title={data.title}
-                            publication={data.publication}
-                            year={data.year}
-                            authors={data.authors}
-                            link={data.link}
-                            code={data.code}
-                        />
-                    ))}
-                </section>
-                <section id="projects" className="red-background">
-                    <h1>Projects</h1>
-                    <p>
-                        Below is a sample of my projects. For a more
-                        comprehensive list of my notable projects, please view
-                        my{" "}
-                        <a
-                            style={{ color: "white" }}
-                            href="https://github.com/yrahul3910/resume/blob/master/pdf/master.pdf"
-                        >
-                            master CV
-                        </a>
-                        .
-                    </p>
-                    <CardGrid cards={projects} />
-                </section>
-                <section id="interests" className="blue-background">
-                    <h1>Personal Interests</h1>
-                    <CardGrid cards={personalInterests} />
-                </section>
-                <section id="contact" className="darkgray-background">
-                    <h1>Contact</h1>
-                    <CardGrid active={true} cards={contacts} />
-                </section>
+                <Section id="resume" cmd="resume">
+                    <h2>Resume</h2>
+                    <div className="resume-list">
+                        {RESUME.map((r, i) => (
+                            <div key={i} className="resume-row">
+                                <div className="resume-row__years">{r.years}</div>
+                                <div>
+                                    <div className="resume-row__role">{r.role}</div>
+                                    <div className="resume-row__org">{r.org}</div>
+                                    <div className="resume-row__body">{r.body}</div>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                    <div className="resume-downloads">
+                        <div className="resume-downloads__head">// targeted CVs</div>
+                        {RESUME_DOWNLOADS.map((d) => (
+                            <a key={d.href} href={d.href} className="resume-downloads__link">
+                                {d.label} <span>↗</span>
+                            </a>
+                        ))}
+                    </div>
+                </Section>
+
+                <Section id="research" cmd="research">
+                    <h2>Research Interests</h2>
+                    <div className="research-grid">
+                        {RESEARCH.map((r) => (
+                            <article key={r.slug} className="research-card">
+                                <div className="research-card__tag"># {r.slug}</div>
+                                <h3>{r.title}</h3>
+                                <p>{r.body}</p>
+                            </article>
+                        ))}
+                    </div>
+                </Section>
+
+                <Section id="pubs" cmd="publications">
+                    <h2>Recent Publications</h2>
+                    <table className="pubs-table">
+                        <tbody>
+                            {publications.map((p, i) => (
+                                <tr key={i}>
+                                    <td className="pubs-table__year">{p.year}</td>
+                                    <td className="pubs-table__venue">
+                                        <em>{p.publication}</em>
+                                    </td>
+                                    <td className="pubs-table__title">
+                                        <span>{p.title}</span>
+                                        <span className="pubs-table__authors">{p.authors}</span>
+                                        <span className="pubs-table__links">
+                                            {p.link && <a href={p.link}>paper ↗</a>}
+                                            {p.code && <a href={p.code}>code ↗</a>}
+                                        </span>
+                                    </td>
+                                </tr>
+                            ))}
+                        </tbody>
+                    </table>
+                </Section>
+
+                <Section id="projects" cmd="projects">
+                    <h2>Projects</h2>
+                    <div className="projects-grid">
+                        {PROJECTS.map((p) => (
+                            <a key={p.name} className="project-card" href={p.link}>
+                                <div className="project-card__head">
+                                    <span className="project-card__name">{p.name}</span>
+                                    <span className="project-card__org">{p.org}</span>
+                                </div>
+                                <p>{p.blurb}</p>
+                                <div className="project-card__stack">
+                                    {p.stack.map((s) => (
+                                        <span key={s}>{s}</span>
+                                    ))}
+                                </div>
+                            </a>
+                        ))}
+                    </div>
+                </Section>
+
+                <Section id="interests" cmd="interests">
+                    <h2>Personal Interests</h2>
+                    <div className="interests-grid">
+                        {INTERESTS.map((it) => (
+                            <div key={it.label} className="interest">
+                                <h3>{it.label}</h3>
+                                <p>{it.body}</p>
+                            </div>
+                        ))}
+                    </div>
+                </Section>
+
+                <Section id="contact" cmd="contact">
+                    <h2>Contact</h2>
+                    <div className="contact-list">
+                        <div className="contact-list__cmd">$ contact --pick</div>
+                        {CONTACTS.map((c) => (
+                            <a key={c.kind} className="contact-row" href={c.href}>
+                                <span className="contact-row__arrow">→</span>
+                                <span className="contact-row__kind">{c.kind.padEnd(10, "\u00A0")}</span>
+                                <span className="contact-row__val">{c.label}</span>
+                                {c.note && <span className="contact-row__note">{c.note}</span>}
+                            </a>
+                        ))}
+                    </div>
+                    <div className="exit">$ exit<span className="exit__caret"></span></div>
+                </Section>
             </main>
         </div>
     );
 };
+
+const Section = ({ id, cmd, children }) => (
+    <section id={id} className="term-section">
+        <div className="term-section__head">
+            <span className="term-section__prompt">$</span>
+            <span className="term-section__cmd">cat ./{cmd}.md</span>
+            <span className="term-section__rule"></span>
+        </div>
+        {children}
+    </section>
+);
 
 export default MainPage;

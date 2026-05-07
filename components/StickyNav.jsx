@@ -1,50 +1,63 @@
-import React from "react";
+// Sticky terminal-style top nav — replaces the old StickyNav.
+// Uses anchor scroll (no scrollIntoView per project guidelines preserved upstream).
 
-export default class StickyNav extends React.Component {
-    publications() {
-        let el = document.getElementById("pubs");
-        el.scrollIntoView({ block: "start", behavior: "smooth" });
-    }
+import React, { useEffect, useState } from "react";
 
-    research() {
-        let el = document.getElementById("research");
-        el.scrollIntoView({ block: "start", behavior: "smooth" });
-    }
+const SECTIONS = [
+    { id: "resume", label: "resume" },
+    { id: "research", label: "research" },
+    { id: "pubs", label: "publications" },
+    { id: "projects", label: "projects" },
+    { id: "interests", label: "interests" },
+    { id: "contact", label: "contact" },
+];
 
-    project() {
-        let el = document.getElementById("projects");
-        el.scrollIntoView({ block: "start", behavior: "smooth" });
-    }
+export default function StickyNav() {
+    const [open, setOpen] = useState(false);
 
-    interests() {
-        let el = document.getElementById("interests");
-        el.scrollIntoView({ block: "start", behavior: "smooth" });
-    }
+    useEffect(() => {
+        const onResize = () => {
+            if (window.innerWidth > 720) setOpen(false);
+        };
+        window.addEventListener("resize", onResize);
+        return () => window.removeEventListener("resize", onResize);
+    }, []);
 
-    contact() {
-        let el = document.getElementById("contact");
-        el.scrollIntoView({ block: "start", behavior: "smooth" });
-    }
+    const go = (id) => (e) => {
+        e.preventDefault();
+        const el = document.getElementById(id);
+        if (el) {
+            const top = el.getBoundingClientRect().top + window.scrollY - 60;
+            window.scrollTo({ top, behavior: "smooth" });
+        }
+        setOpen(false);
+    };
 
-    showMenu() {
-        let el = document.getElementsByClassName("nav-menu-sticky")[0];
-        el.classList.toggle("expanded");
-    }
-
-    resume() {
-        let el = document.getElementById("resume");
-        el.scrollIntoView({ block: "start", behavior: "smooth" });
-    }
-
-    render() {
-        return <ul className="nav-menu-sticky">
-            <li onClick={this.showMenu} id="hamburger"><i className="fas fa-bars"></i></li>
-            <li onClick={this.resume}>Resume</li>
-            <li onClick={this.research}>Research</li>
-            <li onClick={this.publications}> Publications</li>
-            <li onClick={this.project}>Projects</li>
-            <li onClick={this.interests}>Interests</li>
-            <li onClick={this.contact}>Contact</li>
-        </ul>;
-    }
+    return (
+        <nav className={`term-nav ${open ? "expanded" : ""}`}>
+            <div className="term-nav__brand">
+                <span className="term-nav__prompt">~/rahul</span>
+                <span className="term-nav__cursor">$</span>
+            </div>
+            <button
+                aria-label="Toggle menu"
+                className="term-nav__hamburger"
+                onClick={() => setOpen((o) => !o)}
+            >
+                <i className="fas fa-bars"></i>
+            </button>
+            <ul className="term-nav__list">
+                {SECTIONS.map((s) => (
+                    <li key={s.id}>
+                        <a href={`#${s.id}`} onClick={go(s.id)}>
+                            ./{s.label}
+                        </a>
+                    </li>
+                ))}
+            </ul>
+            <div className="term-nav__status">
+                <span className="term-nav__dot"></span>online
+            </div>
+        </nav>
+    );
 }

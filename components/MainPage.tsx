@@ -1,12 +1,8 @@
-// MainPage — terminal-A direction.
-// Replaces the existing card-grid layout with a single dark dev-formal theme.
-
 import React, { useEffect } from "react";
 import StickyNav from "./StickyNav.jsx";
 import ScrollToTop from "./ScrollToTop.jsx";
 import Hero from "./Hero.jsx";
 import NowPlaying from "./NowPlaying.jsx";
-import CoffeeNow from "./CoffeeNow.jsx";
 
 import publications from "../src/publications.jsx";
 
@@ -177,7 +173,6 @@ const MainPage = () => {
             <Hero />
             <aside className="floating-modules">
                 <NowPlaying />
-                <CoffeeNow />
             </aside>
 
             <main>

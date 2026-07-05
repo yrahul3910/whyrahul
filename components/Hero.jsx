@@ -42,7 +42,7 @@ export default function Hero() {
                     ) : (
                         <>
                             <div className="hero__cmd">
-                                <span className="hero__line-prompt">$ </span>./identify
+                                <span className="hero__line-prompt">$ </span>whoami
                             </div>
                             <h1 className="name">Rahul Yedida</h1>
                             <ul className="hero__kv">

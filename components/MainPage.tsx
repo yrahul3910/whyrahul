@@ -86,15 +86,15 @@ const RESUME = [
 const RESUME_DOWNLOADS = [
   {
     label: "Academic CV",
-    href: "https://github.com/yrahul3910/resume/raw/master/pdf/academic.pdf",
+    href: "https://github.com/yrahul3910/resume/raw/master/pdf/RahulYedida_ResearchScientist.pdf",
   },
   {
     label: "ML Engineer CV",
-    href: "https://github.com/yrahul3910/resume/raw/master/pdf/ml.pdf",
+    href: "https://github.com/yrahul3910/resume/raw/master/pdf/RahulYedida_MLEngineer.pdf",
   },
   {
     label: "SWE CV",
-    href: "https://github.com/yrahul3910/resume/raw/master/pdf/sde.pdf",
+    href: "https://github.com/yrahul3910/resume/raw/master/pdf/RahulYedida_SoftwareEngineer.pdf",
   },
   {
     label: "Master CV",

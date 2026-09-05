@@ -5,9 +5,9 @@ export default [
         title: "Academic",
         info:
             <div>
-                <p>Most of my publications are in SE venues, since my research is at the intersection of deep learning and software engineering. My academic CV is below.</p>
+                <p>Most of my publications are in SE venues, since my research is at the intersection of deep learning and software engineering. My academic CV, suitable for roles requiring an academic background, is below.</p>
                 <p>
-                    <a href="https://github.com/yrahul3910/resume/raw/master/pdf/academic.pdf">CV</a>
+                    <a href="https://github.com/yrahul3910/resume/raw/master/pdf/RahulYedida_ResearchScientist.pdf">CV</a>
                 </p>
                 <p>
                     <a href="https://github.com/yrahul3910/whyrahul/raw/master/assets/research_statement.pdf">Research Statement</a>
@@ -21,15 +21,13 @@ export default [
             </div>
     },
     {
-        title: "ML Engineer / Research Scientist",
+        title: "ML Engineer",
         info:
             <div>
-                <p>My ML experience lies primarily in applied ML, although I have worked in theoretical research. I am comfortable
-                    using Keras, PyTorch and other common ML frameworks.
-                    My resume for ML Engineer, ML Research Scientist, and related positions is below.
+                <p>I am comfortable using Keras, PyTorch and other common ML frameworks. My resume for ML Engineer, Research Engineer, and related positions whose requirements include developing and evaluating models (as opposed to inference, quantization, and deployment) is below.
                 </p>
                 <p>
-                    <a href="https://github.com/yrahul3910/resume/raw/master/pdf/ml.pdf">CV</a>
+                    <a href="https://github.com/yrahul3910/resume/raw/master/pdf/RahulYedida_MLEngineer.pdf">CV</a>
                 </p>
             </div>
     },
@@ -40,7 +38,7 @@ export default [
                 <p>I have worked on multiple full-stack solutions using React/TypeScript and various database and server systems.
                     My resume for software developer roles is below.</p>
                 <p>
-                    <a href="https://github.com/yrahul3910/resume/raw/master/pdf/sde.pdf">Download</a>
+                    <a href="https://github.com/yrahul3910/resume/raw/master/pdf/RahulYedida_SoftwareEngineer.pdf">Download</a>
                 </p>
             </div>
     }

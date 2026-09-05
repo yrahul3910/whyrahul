@@ -1,6 +1,3 @@
-// Sticky terminal-style top nav — replaces the old StickyNav.
-// Uses anchor scroll (no scrollIntoView per project guidelines preserved upstream).
-
 import React, { useEffect, useState } from "react";
 
 const SECTIONS = [
@@ -23,41 +20,29 @@ export default function StickyNav() {
         return () => window.removeEventListener("resize", onResize);
     }, []);
 
-    const go = (id) => (e) => {
-        e.preventDefault();
-        const el = document.getElementById(id);
-        if (el) {
-            const top = el.getBoundingClientRect().top + window.scrollY - 60;
-            window.scrollTo({ top, behavior: "smooth" });
-        }
-        setOpen(false);
-    };
-
     return (
-        <nav className={`term-nav ${open ? "expanded" : ""}`}>
-            <div className="term-nav__brand">
-                <span className="term-nav__prompt">~/rahul</span>
-                <span className="term-nav__cursor">$</span>
-            </div>
+        <nav aria-label="Main navigation" className={`term-nav ${open ? "expanded" : ""}`}>
+            <a className="term-nav__brand" href="#hero" onClick={() => setOpen(false)}>
+                ~/rahul
+            </a>
             <button
-                aria-label="Toggle menu"
+                type="button"
+                aria-expanded={open}
+                aria-controls="section-navigation"
                 className="term-nav__hamburger"
                 onClick={() => setOpen((o) => !o)}
             >
-                <i className="fas fa-bars"></i>
+                {open ? "Close" : "Menu"}
             </button>
-            <ul className="term-nav__list">
+            <ul id="section-navigation" className="term-nav__list">
                 {SECTIONS.map((s) => (
                     <li key={s.id}>
-                        <a href={`#${s.id}`} onClick={go(s.id)}>
-                            ./{s.label}
+                        <a href={`#${s.id}`} onClick={() => setOpen(false)}>
+                            {s.label}
                         </a>
                     </li>
                 ))}
             </ul>
-            <div className="term-nav__status">
-                <span className="term-nav__dot"></span>online
-            </div>
         </nav>
     );
 }

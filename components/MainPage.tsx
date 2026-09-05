@@ -9,77 +9,78 @@ const RESEARCH = [
   {
     slug: "ai-for-se",
     title: "AI for SE",
-    body: "I work at the intersection of artificial intelligence and software engineering. My work includes a novel SOTA hyper-parameter optimization method that requires 25% of the runtime and a novel oversampling method that improves defect prediction by up to 123%. My dissertation focused on better, faster deep learning for SE by using feedforward networks over static code features with theoretically-driven novel methods that outperform the prior state-of-the-art at a fraction of the cost.",
+    body: "My PhD work applied deep learning to defect prediction, code smell detection, and microservice partitioning. It improved defect prediction F1 scores by up to 123% over prior state-of-the-art methods. I also studied semi-supervised static analysis, achieving state-of-the-art results with 10% of the labels.",
   },
   {
     slug: "theory-driven-dl",
-    title: "Theory-Driven Deep Learning",
-    body: "I work on theoretical and applied deep learning, especially with loss functions. A lot of my applied deep learning work involves using recent results from the theoretical literature, bridging the gap between the two. Examples of this can be seen in my work on automated microservice partitioning and hyper-parameter optimization. Much of my work involves optimizing for more favorable loss landscapes.",
+    title: "Theory-driven deep learning",
+    body: "I'm interested in using learning theory to guide model and loss-function design. My hyper-parameter optimization method outperformed prior state-of-the-art methods and ran 36.4% faster. At LexisNexis, I developed a contrastive-loss-based passage filter with a median latency of 12ms.",
   },
 ];
 
 const PROJECTS = [
   {
-    name: "Zotero RAG System",
-    org: "rust",
+    name: "1 Billion Row Challenge",
+    org: "performance",
     blurb:
-      "RAG system for my Zotero library, with a custom academic-PDF parser that extracts text and equations.",
-    link: "https://github.com/zotero-rag/zotero-rag",
-    stack: ["Rust"],
+      "A Zig implementation that processes a billion rows in 1.20 seconds on a 14-core M4 Pro, using mmap, Robin Hood hashing, and packed SIMD.",
+    link: "https://github.com/yrahul3910/1brc",
+    stack: ["Zig"],
+  },
+  {
+    name: "Q&A for Zotero",
+    org: "academic search",
+    blurb:
+      "Question answering and semantic search over a Zotero library, with a custom academic-PDF parser and a multi-provider RAG library supporting tool calls.",
+    link: "https://github.com/zotero-rag/zotero-rag/",
+    stack: ["Rust", "SQLite", "LanceDB"],
+  },
+  {
+    name: "JournalBear",
+    org: "journaling",
+    blurb:
+      "Cross-platform journaling with AES-256 encryption, an Electron desktop app, and separate native apps for iOS and macOS.",
+    link: "https://github.com/yrahul3910/journal",
+    stack: ["TypeScript", "React", "Zustand", "Electron", "SwiftUI"],
   },
   {
     name: "Programmable Resumes",
-    org: "DSL",
+    org: "developer tools",
     blurb:
-      "A syntax for modular resumes that allows generating multiple targeted CVs in parallel.",
-    link: "https://github.com/yrahul3910/programmable-resumes/",
+      "A specification and implementation for modular, customizable resumes, with support for two LaTeX templates. I use it to write my own resume.",
+    link: "https://github.com/yrahul3910/programmable-resumes",
     stack: ["Python", "LaTeX"],
   },
   {
     name: "raise-utils",
-    org: "lab tooling · 70k+ dl",
-    blurb: "Centralized Python implementations of our lab's algorithms.",
+    org: "research tooling / 73k+ downloads",
+    blurb:
+      "An ML utilities package I developed for reproducible experiments, used by multiple research groups.",
     link: "https://pypi.org/project/raise-utils/",
-    stack: ["Python"],
+    stack: ["Python", "Keras"],
   },
   {
     name: "pysh",
     org: "language",
     blurb:
-      "Superset of Python that allows inline shell command evaluation. Includes a transpiler and a VS Code extension.",
+      "A superset of Python for running shell code natively, with a VS Code syntax-highlighting extension.",
     link: "https://github.com/yrahul3910/pysh",
-    stack: ["Python", "C++"],
-  },
-  {
-    name: "JournalBear",
-    org: "desktop",
-    blurb:
-      "Cross-platform journal app built with Electron, encrypted with AES-256.",
-    link: "https://github.com/yrahul3910/journal",
-    stack: ["Electron", "React", "shadcn/ui"],
-  },
-  {
-    name: "Activity Data Analysis",
-    org: "personal data",
-    blurb:
-      "Collected 10 months of activity data across 30 categories, then trained a 2-layer LSTM to predict the next activity from the previous five.",
-    link: "https://github.com/yrahul3910/atracker-analysis",
-    stack: ["Python"],
+    stack: ["C++", "TMLanguage"],
   },
 ];
 
 const RESUME = [
   {
-    years: "2024 → present",
-    role: "Senior Data Scientist",
-    org: "LexisNexis · Protégé",
-    body: "Deep learning for legal document understanding at production scale.",
+    years: "2024 - present",
+    role: "Senior Data Scientist I",
+    org: "LexisNexis Legal & Professional",
+    body: "Reduced product runtime by 24.8%. On a three-person team, improved complaint drafting usefulness from 40% to 86% in attorney reviews. Built debugging tools in Rust and React.",
   },
   {
-    years: "2019 — 2024",
-    role: "Research Assistant",
-    org: "RAISE Lab, NC State",
-    body: "Loss functions, hyper-parameter optimization, defect prediction, AI for SE",
+    years: "2019 - 2024",
+    role: "PhD Student",
+    org: "NC State / Advisor: Tim Menzies",
+    body: "Completed a PhD in Computer Science. Teaching assistant for 830 students across five semesters, covering C and Software Tools, Software Engineering, and Automated Software Engineering.",
   },
 ];
 
@@ -113,11 +114,11 @@ const RESUME_DOWNLOADS = [
 const INTERESTS = [
   {
     label: "Coffee",
-    body: "I brew my pour overs using the Orea v3, and my espresso using the Breville Barista Express and a Sette 270Wi. My favorite coffee so far was a Panama Geisha from Black & White Coffee Roasters.",
+    body: "I brew pour overs using a V60, and espresso using the Breville Barista Express and a Sette 270Wi. My favorite coffee so far was a Panama Geisha from Black & White Coffee Roasters.",
   },
   {
     label: "Taylor Swift",
-    body: "I've been a big fan of Taylor Swift since 2018! My favorite era is the Lover era, although I currently have Speak Now on repeat.",
+    body: "I've been a big fan of Taylor Swift since 2018! My favorite era is the Lover era, although I currently have TTPD on repeat.",
   },
   {
     label: "Digital Privacy & OSS",
@@ -132,7 +133,7 @@ const INTERESTS = [
 const CONTACTS = [
   {
     kind: "email",
-    label: "rahul@ryedida.me",
+    label: "hello@ryedida.me",
     href: "mailto:hello@ryedida.me",
     note: "preferred",
   },
@@ -150,6 +151,11 @@ const CONTACTS = [
     kind: "linkedin",
     label: "linkedin.com/in/rahul-yedida",
     href: "https://www.linkedin.com/in/rahul-yedida/",
+  },
+  {
+    kind: "google",
+    label: "g.dev/ryedida",
+    href: "https://g.dev/ryedida",
   },
   {
     kind: "twitter",
@@ -177,8 +183,8 @@ const MainPage = () => {
       <Hero />
 
       <main>
-        <Section id="resume" cmd="resume">
-          <h2>Resume</h2>
+        <Section id="resume">
+          <h2 id="resume-heading">Resume</h2>
           <div className="resume-list">
             {RESUME.map((r, i) => (
               <div key={i} className="resume-row">
@@ -192,7 +198,6 @@ const MainPage = () => {
             ))}
           </div>
           <div className="resume-downloads">
-            <div className="resume-downloads__head">// targeted CVs</div>
             {RESUME_DOWNLOADS.map((d) => (
               <a key={d.href} href={d.href} className="resume-downloads__link">
                 {d.label} <span>↗</span>
@@ -201,12 +206,11 @@ const MainPage = () => {
           </div>
         </Section>
 
-        <Section id="research" cmd="research">
-          <h2>Research Interests</h2>
+        <Section id="research">
+          <h2 id="research-heading">Research interests</h2>
           <div className="research-grid">
             {RESEARCH.map((r) => (
               <article key={r.slug} className="research-card">
-                <div className="research-card__tag"># {r.slug}</div>
                 <h3>{r.title}</h3>
                 <p>{r.body}</p>
               </article>
@@ -214,8 +218,8 @@ const MainPage = () => {
           </div>
         </Section>
 
-        <Section id="pubs" cmd="publications">
-          <h2>Recent Publications</h2>
+        <Section id="pubs">
+          <h2 id="pubs-heading">Publications</h2>
           <table className="pubs-table">
             <tbody>
               {publications.map((p, i) => (
@@ -238,8 +242,8 @@ const MainPage = () => {
           </table>
         </Section>
 
-        <Section id="projects" cmd="projects">
-          <h2>Projects</h2>
+        <Section id="projects">
+          <h2 id="projects-heading">Projects</h2>
           <div className="projects-grid">
             {PROJECTS.map((p) => (
               <a key={p.name} className="project-card" href={p.link}>
@@ -258,8 +262,8 @@ const MainPage = () => {
           </div>
         </Section>
 
-        <Section id="interests" cmd="interests">
-          <h2>Personal Interests</h2>
+        <Section id="interests">
+          <h2 id="interests-heading">Personal interests</h2>
           <div className="interests-grid">
             {INTERESTS.map((it) => (
               <div key={it.label} className="interest">
@@ -270,23 +274,16 @@ const MainPage = () => {
           </div>
         </Section>
 
-        <Section id="contact" cmd="contact">
-          <h2>Contact</h2>
+        <Section id="contact">
+          <h2 id="contact-heading">Contact</h2>
           <div className="contact-list">
-            <div className="contact-list__cmd">$ contact --pick</div>
             {CONTACTS.map((c) => (
               <a key={c.kind} className="contact-row" href={c.href}>
-                <span className="contact-row__arrow">→</span>
-                <span className="contact-row__kind">
-                  {c.kind.padEnd(10, "\u00A0")}
-                </span>
+                <span className="contact-row__kind">{c.kind}</span>
                 <span className="contact-row__val">{c.label}</span>
                 {c.note && <span className="contact-row__note">{c.note}</span>}
               </a>
             ))}
-          </div>
-          <div className="exit">
-            exit<span className="exit__caret"></span>
           </div>
         </Section>
       </main>
@@ -294,13 +291,13 @@ const MainPage = () => {
   );
 };
 
-const Section = ({ id, cmd, children }) => (
-  <section id={id} className="term-section">
-    <div className="term-section__head">
-      <span className="term-section__prompt">$</span>
-      <span className="term-section__cmd">bat ./{cmd}.md</span>
-      <span className="term-section__rule"></span>
-    </div>
+type SectionProps = {
+  id: string;
+  children: React.ReactNode;
+};
+
+const Section = ({ id, children }: SectionProps) => (
+  <section id={id} className="term-section" aria-labelledby={`${id}-heading`}>
     {children}
   </section>
 );

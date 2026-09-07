@@ -13,7 +13,7 @@
         "start": "webpack-dev-server",
         "predeploy": "npm run dist",
         "deploy": "cp dist/* ../yrahul3910.github.io/",
-        "postdeploy": "cd ../yrahul3910.github.io/ && git commit -am 'Update' && git push"
+        "postdeploy": "cd ../yrahul3910.github.io/ && git commit -am 'Update' --no-gpg-sign && git push"
     },
     "devDependencies": {
         "@babel/cli": "^7.26.4",
